@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Afternoon Kitchen | Korean Everyday Food & Lifestyle Magazine</title>
+  <meta name="description" content="Official Naver Culinary Influencer. Master authentic Kimbap, Bento lunchboxes, Costco Korea kitchen hacks, and wholesome everyday home-cooked Korean meals.">
+
+  <!-- Multi-Language Hreflang SEO -->
+  <link rel="alternate" hreflang="ko" href="https://yourkfooddomain.com/" />
+  <link rel="alternate" hreflang="en" href="https://yourkfooddomain.com/en/" />
+  <link rel="alternate" hreflang="zh" href="https://yourkfooddomain.com/zh/" />
+  <link rel="alternate" hreflang="ja" href="https://yourkfooddomain.com/ja/" />
+  <link rel="alternate" hreflang="fr" href="https://yourkfooddomain.com/fr/" />
+  <link rel="alternate" hreflang="de" href="https://yourkfooddomain.com/de/" />
+  <link rel="alternate" hreflang="pt" href="https://yourkfooddomain.com/pt/" />
+  <link rel="alternate" hreflang="x-default" href="https://yourkfooddomain.com/" />
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div id="reading-progress"></div>
+
+  <!-- 1. HEADER -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-seal">食</span>
+        Afternoon Kitchen
+        <span>Korean Everyday Food</span>
+      </a>
+
+      <div class="nav-right-cluster">
+        <nav>
+          <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="#cat-kimbap">Kimbap</a></li>
+            <li><a href="#cat-lunchbox">Lunchbox</a></li>
+            <li><a href="#cat-costco">Costco</a></li>
+            <li><a href="#cat-homecook">Home Cooking</a></li>
+            <li><a href="#cat-banchan">Banchan</a></li>
+            <li><a href="#cat-soup">Soup & Stew</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Global Language Selector -->
+        <div class="lang-selector">
+          <button class="lang-btn" id="langBtn" aria-label="Change language">
+            🌐 EN ▾
+          </button>
+          <ul class="lang-dropdown" id="langDropdown">
+            <li><a href="../index.html">🇰🇷 한국어 (KR)</a></li>
+            <li><a href="index.html" class="active">🇺🇸 English (EN)</a></li>
+            <li><a href="../zh/index.html">🇨🇳 中文 (ZH)</a></li>
+            <li><a href="../ja/index.html">🇯🇵 日本語 (JA)</a></li>
+            <li><a href="../fr/index.html">🇫🇷 Français (FR)</a></li>
+            <li><a href="../de/index.html">🇩🇪 Deutsch (DE)</a></li>
+            <li><a href="../pt/index.html">🇵🇹 Português (PT)</a></li>
+          </ul>
+        </div>
+
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. HERO -->
+  <section class="hero-editorial">
+    <div class="hero-editorial-card">
+      <div>
+        <span class="hero-tagline">✦ DAILY KITCHEN STORIES</span>
+        <h1 class="hero-main-title">Delicious Everyday,<br>Korean Home Cooking</h1>
+        <p class="hero-sub-title">Kimbap · Lunchbox · Costco Kitchen · Home Meals</p>
+        <p class="hero-en-sub">Korean Everyday Food & Lifestyle Magazine</p>
+        <div class="hero-btn-group">
+          <a href="#smart-blocks" class="btn-editorial-primary">Explore Categories ↓</a>
+          <a href="#editors-pick" class="btn-editorial-outline">Editor's Choice</a>
+        </div>
+      </div>
+
+      <div class="hero-image-wrapper">
+        <img src="../images/food-kimbap-1.png" alt="Authentic Kimbap & Lunchbox">
+        <div class="hero-image-caption">
+          🍙 Authentic Korean Home Cooking Crafted with Heart
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. NAVER INFLUENCER / FEATURED -->
+  <div class="naver-trust-strip">
+    <div class="naver-trust-box">
+      <div class="naver-trust-left">
+        <div class="naver-emblem-cluster">
+          <img src="../images/badge-monthly-blog.png" alt="2026 Blog of the Month">
+          <img src="../images/badge-naver-mate.png" alt="Naver Mate Recipe Creator">
+        </div>
+        <div class="naver-trust-text">
+          <h4>NAVER Influencer</h4>
+          <p>2026 Blog of the Month · Naver Mate Official Recipe Creator</p>
+        </div>
+      </div>
+      <a href="https://blog.naver.com/gayagum12" target="_blank" rel="noopener noreferrer" class="naver-blog-link">
+        Visit Official Blog ↗
+      </a>
+    </div>
+  </div>
+
+  <!-- 4. SMART BLOCK (3x2 Grid) -->
+  <section class="section-container" id="smart-blocks">
+    <div class="section-head">
+      <h2 class="section-title">Smart Curation</h2>
+      <span class="section-en-sub">6 Core Categories</span>
+    </div>
+
+    <div class="smart-block-grid-3x2">
+      <!-- 1. Kimbap -->
+      <article class="smart-category-card" id="cat-kimbap">
+        <a href="../posts/post-kimbap-master.html">
+          <div class="smart-cat-img-box">
+            <img src="../images/food-kimbap-1.png" alt="Kimbap" class="smart-cat-img">
+            <span class="smart-cat-pill">01</span>
+          </div>
+          <div class="smart-cat-info">
+            <div class="smart-cat-title-wrap">
+              <h3 class="smart-cat-title">김밥</h3>
+              <span class="smart-cat-en">KIMBAP</span>
+            </div>
+            <p class="smart-cat-desc">Golden seasoned rice ratio and foolproof rolling techniques.</p>
+            <span class="smart-cat-link">View Recipes →</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- 2. Lunchbox -->
+      <article class="smart-category-card" id="cat-lunchbox">
+        <a href="../posts/post-shrimp-zucchini-tofu.html">
+          <div class="smart-cat-img-box">
+            <img src="../images/food-kimbap-2.png" alt="Lunchbox" class="smart-cat-img">
+            <span class="smart-cat-pill">02</span>
+          </div>
+          <div class="smart-cat-info">
+            <div class="smart-cat-title-wrap">
+              <h3 class="smart-cat-title">도시락</h3>
+              <span class="smart-cat-en">LUNCHBOX</span>
+            </div>
+            <p class="smart-cat-desc">Clean, satisfying Bento lunchboxes and one-bowl rice bowls.</p>
+            <span class="smart-cat-link">View Recipes →</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- 3. Costco Korea -->
+      <article class="smart-category-card" id="cat-costco">
+        <a href="../posts/post-costco-beef-guide.html">
+          <div class="smart-cat-img-box">
+            <img src="../images/food-costco-1.png" alt="Costco Korea" class="smart-cat-img">
+            <span class="smart-cat-pill">03</span>
+          </div>
+          <div class="smart-cat-info">
+            <div class="smart-cat-title-wrap">
+              <h3 class="smart-cat-title">코스트코 장보기</h3>
+              <span class="smart-cat-en">COSTCO KOREA</span>
+            </div>
+            <p class="smart-cat-desc">Smart portioning and Korean culinary adaptations for bulk ingredients.</p>
+            <span class="smart-cat-link">View Recipes →</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- 4. Home Cooking -->
+      <article class="smart-category-card" id="cat-homecook">
+        <a href="../posts/post-dried-pollack-egg-porridge.html">
+          <div class="smart-cat-img-box">
+            <img src="../images/food-kfood-3.png" alt="Home Cooking" class="smart-cat-img">
+            <span class="smart-cat-pill">04</span>
+          </div>
+          <div class="smart-cat-info">
+            <div class="smart-cat-title-wrap">
+              <h3 class="smart-cat-title">집밥</h3>
+              <span class="smart-cat-en">HOME COOKING</span>
+            </div>
+            <p class="smart-cat-desc">Warm, nourishing everyday Korean comfort food for the soul.</p>
+            <span class="smart-cat-link">View Recipes →</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- 5. Banchan -->
+      <article class="smart-category-card" id="cat-banchan">
+        <a href="../posts/post-gochujang-jinmichae.html">
+          <div class="smart-cat-img-box">
+            <img src="../images/food-kfood-2.png" alt="Banchan" class="smart-cat-img">
+            <span class="smart-cat-pill">05</span>
+          </div>
+          <div class="smart-cat-info">
+            <div class="smart-cat-title-wrap">
+              <h3 class="smart-cat-title">반찬</h3>
+              <span class="smart-cat-en">BANCHAN</span>
+            </div>
+            <p class="smart-cat-desc">10-minute refrigerator side dishes packed with rich umami flavors.</p>
+            <span class="smart-cat-link">View Recipes →</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- 6. Soup & Stew -->
+      <article class="smart-category-card" id="cat-soup">
+        <a href="../posts/post-clam-soybean-soup.html">
+          <div class="smart-cat-img-box">
+            <img src="../images/food-kfood-1.png" alt="Soup & Stew" class="smart-cat-img">
+            <span class="smart-cat-pill">06</span>
+          </div>
+          <div class="smart-cat-info">
+            <div class="smart-cat-title-wrap">
+              <h3 class="smart-cat-title">국 · 찌개</h3>
+              <span class="smart-cat-en">SOUP & STEW</span>
+            </div>
+            <p class="smart-cat-desc">Deep broths and authentic fermented Korean stews without MSG.</p>
+            <span class="smart-cat-link">View Recipes →</span>
+          </div>
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <!-- 5. EDITOR'S PICK -->
+  <section class="section-container" id="editors-pick">
+    <div class="section-head">
+      <h2 class="section-title">Editor's Pick</h2>
+      <span class="section-en-sub">Featured Selection</span>
+    </div>
+
+    <div class="editors-pick-layout">
+      <article class="featured-lead-card">
+        <a href="../posts/post-kimbap-master.html">
+          <div class="featured-lead-img-box">
+            <img src="../images/food-kimbap-1.png" alt="Kimbap Masterclass">
+          </div>
+          <div class="featured-lead-body">
+            <span class="featured-lead-tag">FEATURED STORY</span>
+            <h3 class="featured-lead-title">The Secret to Flawless Kimbap: Golden Rice Ratio & Rolling Technique</h3>
+            <p class="featured-lead-desc">
+              Master the balance of sesame oil seasoning, moisture-free sautéing, and tight rolling steps.
+            </p>
+          </div>
+        </a>
+      </article>
+
+      <div class="sub-picks-list">
+        <article class="sub-pick-item">
+          <div class="sub-pick-thumb"><img src="../images/food-costco-1.png" alt="Beef Shank"></div>
+          <div class="sub-pick-info">
+            <h4><a href="../posts/post-costco-beef-guide.html">Tender Boiled Beef Shank & Golden Broth Radish Soup</a></h4>
+            <p>1 hr 20 min slow simmer for tender gelatinous texture</p>
+          </div>
+        </article>
+
+        <article class="sub-pick-item">
+          <div class="sub-pick-thumb"><img src="../images/food-kfood-2.png" alt="Dried Squid"></div>
+          <div class="sub-pick-info">
+            <h4><a href="../posts/post-gochujang-jinmichae.html">Gochujang Dried Squid: Secret Vinegar Dash Hack</a></h4>
+            <p>Stays soft and chewable in the fridge without mayo</p>
+          </div>
+        </article>
+
+        <article class="sub-pick-item">
+          <div class="sub-pick-thumb"><img src="../images/food-costco-2.png" alt="Salmon Jang"></div>
+          <div class="sub-pick-info">
+            <h4><a href="../posts/post-costco-salmon-jang.html">No-Cook Soy Marinated Salmon (Yeoneo-Jang)</a></h4>
+            <p>Citrus sweet soy glaze ready in just 6 hours</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. AD SLOT -->
+  <div class="ad-container-slot">
+    <div class="ad-box-wrapper">
+      <span class="ad-label">Sponsored Advertisement</span>
+      <div style="font-size: 0.82rem; color: #8E8E8E;">Google AdSense Responsive Unit Placeholder</div>
+    </div>
+  </div>
+
+  <!-- 7. GLOBAL LANGUAGE STRIP -->
+  <div class="global-lang-bar">
+    <div class="global-lang-title">
+      <span>🌐</span> GLOBAL LANGUAGE EDITIONS
+    </div>
+    <ul class="global-lang-list">
+      <li><a href="../index.html">KR 한국어</a></li>
+      <li><a href="index.html" class="active">EN English</a></li>
+      <li><a href="../zh/index.html">ZH 中文</a></li>
+      <li><a href="../ja/index.html">JA 日本語</a></li>
+      <li><a href="../fr/index.html">FR Français</a></li>
+      <li><a href="../de/index.html">DE Deutsch</a></li>
+      <li><a href="../pt/index.html">PT Português</a></li>
+    </ul>
+  </div>
+
+  <!-- 8. FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h3>食 Afternoon Kitchen</h3>
+        <p>Curated Korean everyday food, Kimbap, Bento lunchboxes, and Costco kitchen hacks by verified culinary creators.</p>
+      </div>
+      <div class="footer-nav">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#cat-kimbap">Kimbap Stories</a></li>
+          <li><a href="#cat-lunchbox">Daily Lunchbox</a></li>
+          <li><a href="#cat-costco">Costco Korea Hacks</a></li>
+          <li><a href="#cat-homecook">Home Comfort Food</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav">
+        <h4>Policy</h4>
+        <ul>
+          <li><a href="../about.html">About Us</a></li>
+          <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="../terms.html">Terms of Service</a></li>
+          <li><a href="../contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Afternoon Kitchen. All rights reserved. Original Photography & Content.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
