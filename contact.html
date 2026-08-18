@@ -3,16 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>문의하기 (Contact Us) | K-Food Insight</title>
-  <meta name="description" content="K-Food Insight 에디토리얼 팀에 문의, 제휴 제안을 보내주세요.">
-  <link rel="stylesheet" href="css/style.css">
+  <title>문의하기 (Contact Us) | 오후의 키친</title>
+  <meta name="description" content="오후의 키친 레시피 제휴, 문의 및 피드백 접수 창구입니다.">
+  <link rel="stylesheet" href="css/style.css?v=3.0">
 </head>
 <body>
   <div id="reading-progress"></div>
   <header class="site-header">
     <div class="nav-container">
-      <a href="index.html" class="brand-logo">🥢 K-Food <span>Insight</span></a>
-      <button class="mobile-toggle" id="mobileToggle">☰</button>
+      <a href="index.html" class="brand-logo">
+        <span class="brand-seal-svg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 11c0 4.418 3.582 8 8 8s8-3.582 8-8H4z" fill="currentColor" fill-opacity="0.2"/>
+            <path d="M4 11h16" />
+            <path d="M19 4L7 10" />
+          </svg>
+        </span>
+        오후의 키친
+        <span>Korean Everyday Food</span>
+      </a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="메뉴 열기">☰</button>
       <nav>
         <ul class="nav-links" id="navLinks">
           <li><a href="index.html">홈</a></li>
@@ -24,48 +34,43 @@
     </div>
   </header>
 
-  <div class="main-layout full-width">
-    <main class="page-container">
-      <h1 class="page-title">✉️ 독자 문의 및 제휴 (Contact Us)</h1>
-      
-      <p style="margin-bottom: 2rem; color: var(--text-muted);">
-        K-Food Insight 콘텐츠에 대한 피드백, 레시피 관련 질문, 비즈니스 협업 제안을 환영합니다. 아래 폼을 작성해 주시면 검토 후 답변드리겠습니다.
-      </p>
+  <div class="main-layout full-width" style="max-width: 760px; margin: 2.5rem auto; padding: 0 1.5rem;">
+    <main>
+      <div style="background:#ffffff; padding:2.5rem; border-radius:8px; border:1px solid var(--border);">
+        <h1 style="font-family: var(--font-serif); font-size:2rem; color:var(--ink-dark); margin-bottom:0.5rem;">✉️ 문의하기 (Contact Us)</h1>
+        <p style="color:var(--text-muted); margin-bottom:2rem; font-size:0.95rem;">
+          레시피에 관한 궁금한 점, 협업 제안, 피드백을 남겨주시면 정성껏 답변드리겠습니다.
+        </p>
 
-      <form class="contact-form" id="contactForm">
-        <div class="form-group">
-          <label for="name">성함 또는 닉네임 *</label>
-          <input type="text" id="name" class="form-input" placeholder="홍길동" required>
+        <form id="contactForm" style="display:flex; flex-direction:column; gap:1.25rem;">
+          <div>
+            <label for="name" style="display:block; font-weight:700; font-size:0.9rem; margin-bottom:0.4rem;">이름 / 닉네임 *</label>
+            <input type="text" id="name" required style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:4px; font-size:0.95rem;">
+          </div>
+          <div>
+            <label for="email" style="display:block; font-weight:700; font-size:0.9rem; margin-bottom:0.4rem;">이메일 주소 *</label>
+            <input type="email" id="email" required style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:4px; font-size:0.95rem;">
+          </div>
+          <div>
+            <label for="message" style="display:block; font-weight:700; font-size:0.9rem; margin-bottom:0.4rem;">문의 내용 *</label>
+            <textarea id="message" rows="5" required style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:4px; font-size:0.95rem; font-family:inherit;"></textarea>
+          </div>
+          <button type="submit" class="btn-editorial-primary" style="justify-content:center; padding:0.85rem; font-size:1rem; cursor:pointer;">
+            문의 보내기 ✉
+          </button>
+        </form>
+
+        <div style="margin-top:2rem; padding-top:1.5rem; border-top:1px solid var(--border-light); font-size:0.88rem; color:var(--text-muted);">
+          <p><strong>공식 이메일:</strong> gayagum12@naver.com</p>
+          <p><strong>네이버 블로그:</strong> <a href="https://blog.naver.com/gayagum12" target="_blank" rel="noopener noreferrer" style="color:var(--deep-green); font-weight:bold; text-decoration:underline;">blog.naver.com/gayagum12</a></p>
         </div>
-
-        <div class="form-group">
-          <label for="email">이메일 주소 *</label>
-          <input type="email" id="email" class="form-input" placeholder="your-email@example.com" required>
-        </div>
-
-        <div class="form-group">
-          <label for="subject">문의 주제 *</label>
-          <input type="text" id="subject" class="form-input" placeholder="예: 레시피 제휴 문의, 오류 제보 등" required>
-        </div>
-
-        <div class="form-group">
-          <label for="message">문의 내용 *</label>
-          <textarea id="message" rows="6" class="form-textarea" placeholder="문의하실 상세 내용을 입력해 주세요." required></textarea>
-        </div>
-
-        <button type="submit" class="btn-primary">문의 메시지 보내기</button>
-      </form>
-
-      <div class="info-box" style="margin-top: 3rem;">
-        <h4>직접 이메일 발송</h4>
-        <p>웹 폼 이용이 원활하지 않을 경우 <code>contact@yourkfooddomain.com</code>으로 직접 메일을 보내주셔도 좋습니다.</p>
       </div>
     </main>
   </div>
 
   <footer class="site-footer">
     <div class="footer-bottom">
-      <p>&copy; 2026 K-Food Insight. All rights reserved.</p>
+      <p>&copy; 2026 오후의 키친. All rights reserved.</p>
     </div>
   </footer>
   <script src="js/main.js"></script>

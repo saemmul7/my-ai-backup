@@ -1,26 +1,42 @@
 # Antigravity 작업 결과 보고 (AI_STATUS.md)
 
-수정일: 2026-08-18 (3차 코드/SEO/접근성/AdSense 최적화 완료)  
-수정 파일: `index.html`, `css/style.css`, `js/main.js`, `about.html`, `AI_TASKS.md`, `CHANGELOG.md`
+수정일: 2026-08-18 (4차 최종 디자인 마감 + AdSense 신청 전 종합 점검 완료)  
+수정 파일: `css/style.css`, `index.html`, `privacy-policy.html`, `terms.html`, `contact.html`, `ADSENSE_SETUP.md`, `AI_TASKS.md`, `CHANGELOG.md`
 
 ---
 
-## 3차 수정 완료 내역
+## 4차 수정 완료 내역
 
-1. **임시 도메인 및 메타데이터 정리**:
-   - 미확정 가짜 도메인(`yourkfooddomain.com`)을 정리하고 상대 경로 및 표준 메타데이터 유지
-   - 검색엔진에 무의미한 `meta keywords` 제거 및 Title / Description / OpenGraph 구조 정돈
-2. **OS 독립적 벡터 SVG 로고 인장 적용**:
-   - `🥢` 이모지 대신 **인라인 벡터 SVG (그릇+젓가락 미니멀 심볼) + 붉은 인장 박스**를 적용하여 모든 OS(iOS, Android, Windows, Mac)에서 동일하고 선명하게 렌더링
-3. **이미지 성능 & Web Vitals 최적화**:
-   - HERO 메인 이미지를 제외한 모든 이미지에 `loading="lazy"`, `decoding="async"` 적용
-   - 이미지 태그에 `width`와 `height`를 명시하여 누적 레이아웃 이동(CLS) 방지
-4. **웹 접근성(A11y) 및 키보드 사용성 강화**:
-   - 모바일 토글 버튼(`mobileToggle`) 및 언어 선택기(`langBtn`)에 `aria-expanded`, `aria-controls` 실시간 동기화
-   - `ESC` 키보드 입력 시 열린 메뉴/드롭다운이 즉시 닫히도록 전역 핸들러 구현
-5. **AdSense 심사 필수 신뢰 페이지 보강 (`about.html` 등)**:
-   - `about.html`에 네이버 인플루언서, 2026 이달의 블로그, 네이버 메이트 등 실제 검증된 크레딧과 제작 원칙을 담아 E-E-A-T 신뢰도 강화
-   - `privacy-policy.html`, `terms.html`, `contact.html` 정상 링크 및 작동 확인
+### 1. 메인 디자인 최종 마감
+- **여백 및 시각 밀도 조율**: HERO, NAVER 신뢰 바, 스마트블록 간격에 넉넉한 수직 마진을 적용하여 첫 화면의 답답함을 해소하고 고급스러운 매거진 룩 완성.
+- **한국적 미학 강도 준수**: 한지 아이보리(`#F7F3EA`), 가느다란 먹선, 붉은 인장 포인트(`食`/SVG #C74732)가 전체 화면의 10~15% 이하를 유지하며, 음식 실사 사진이 1순위로 돋보이도록 마감.
+- **전체 페이지 브랜드 일관성**: `오후의 키친 / Korean Everyday Food`, 인라인 SVG 엠블럼, 딥그린/낙관레드 컬러 시스템을 메인 및 정책 페이지(About, Privacy, Terms, Contact)까지 100% 통일.
+- **도시락 & 김밥 공동 메인 노출**: Editor's Pick 2번째 카드 및 Latest Stories 1번째 카드에 도시락 실질 콘텐츠(`전날 준비해 아침에 바로 담는 남편 도시락`) 배치.
+- **모바일 390px 가독성**: 카드 패딩 및 폰트 크기를 반응형으로 조정하여 텍스트 잘림 없는 쾌적한 UX 제공.
+
+### 2. AdSense 정책 및 배치 점검
+- HERO 바로 아래 광고 슬롯 배제, 본문 콘텐츠 이후 2곳에만 안전한 반응형 광고 슬롯 유지.
+- 정책 페이지(About, Privacy, Terms, Contact)에는 일체 광고 미삽입.
+- 오클릭 유발 요소 및 시선 유도 장식 배제.
+
+### 3. 글로벌 규정 & CMP 운영 가이드 (`ADSENSE_SETUP.md`)
+- 유럽(EEA)/영국 대상 Google 무료 자체 CMP(Privacy & messaging) 활성화 가이드 신설.
+- `privacy-policy.html`에 Google AdSense 쿠키, 맞춤형 광고 거부 링크, GDPR 사용자 권리 조항 반영.
+
+### 4. 기술적 무결성 검증
+- `robots.txt`: 검색엔진 차단 없이 전 페이지 크롤링 허용.
+- `sitemap.xml`: 21개 전체 아티클 및 다국어 페이지 매핑 무결성 확인.
+- 메인/서브/푸터 전체 404 링크 0건.
+
+---
+
+## 📌 AdSense 신청 전 남은 사용자 작업 (운영 도메인 확정 시)
+1. **도메인 구매 및 서버 연결**: 구매한 도메인(예: `kfoodkitchen.com`)을 KT 서버(또는 호스팅)에 연결 및 SSL(HTTPS) 인증서 적용.
+2. **도메인 일괄 치환**: `sitemap.xml`, `robots.txt`, `hreflang` 태그의 플레이스홀더를 실제 도메인으로 치환.
+3. **애드센스 코드 활성화**: `<head>`에 주석 처리된 애드센스 심사 코드에 사용자 `ca-pub-XXXXXXXX` 발급값 삽입.
+4. **Google CMP 활성화**: AdSense 승인 후 `Privacy & messaging` 메뉴에서 GDPR 메시지 게시.
+
+*(상세한 가이드는 프로젝트 내 [ADSENSE_SETUP.md](file:///Users/anabubu/Desktop/은경/ADSENSE_SETUP.md)에 상세히 기록되어 있습니다)*
 
 ---
 

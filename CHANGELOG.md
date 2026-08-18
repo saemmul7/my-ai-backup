@@ -4,6 +4,24 @@
 
 ---
 
+## [2026-08-18] - 4차 최종 디자인 마감 & AdSense 종합 점검
+
+### 🎨 디자인 및 시각 여백 마감
+- HERO, NAVER 신뢰 바, 스마트블록 수직 여백 및 패딩 최적화로 시각적 과밀도 해소
+- 한지 아이보리, 먹선, 붉은 인장 포인트를 10~15% 수준으로 완벽 조율
+- 메인/서브/정책 페이지 전반에 걸쳐 SVG 엠블럼 및 브랜드 타이포그래피 일관성 확립
+- 모바일 390px 스마트블록 및 카드 텍스트 가독성 강화
+
+### 🛡️ Google AdSense & 정책 준수
+- 정책 페이지(About, Privacy, Terms, Contact) 무광고 정책 유지 및 브랜드 통일
+- `privacy-policy.html`에 Google AdSense 쿠키, 맞춤 광고 거부, GDPR 권리 조항 표준화
+- 유럽/영국 사용자 대상 Google CMP 설정 매뉴얼 `ADSENSE_SETUP.md` 신설
+
+### 🔍 기술적 검증
+- `robots.txt`, `sitemap.xml`, 전체 내부 링크 404 없음 무결성 검증 완료
+
+---
+
 ## [2026-08-18] - 3차 코드/SEO/접근성/AdSense 최적화
 
 ### ⚡ 성능 & Web Vitals

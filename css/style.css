@@ -241,7 +241,7 @@ img {
    ========================================================================== */
 .hero-editorial {
   max-width: var(--max-w);
-  margin: 1.5rem auto 0;
+  margin: 2rem auto 0;
   padding: 0 1.5rem;
 }
 
@@ -249,10 +249,10 @@ img {
   background: #ffffff;
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  padding: 3rem 2.5rem;
+  padding: 3.25rem 2.75rem;
   display: grid;
   grid-template-columns: 1.15fr 1.1fr;
-  gap: 3rem;
+  gap: 3.5rem;
   align-items: center;
   position: relative;
   overflow: hidden;
@@ -267,7 +267,7 @@ img {
   right: -50px;
   width: 250px;
   height: 250px;
-  background: radial-gradient(circle, rgba(35, 75, 58, 0.04) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(35, 75, 58, 0.035) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -276,16 +276,16 @@ img {
   align-items: center;
   gap: 6px;
   color: var(--seal-red);
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 1px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
-  margin-bottom: 0.85rem;
+  margin-bottom: 0.95rem;
 }
 
 .hero-main-title {
   font-family: var(--font-serif);
-  font-size: 2.55rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: var(--ink-dark);
   line-height: 1.35;
@@ -294,22 +294,22 @@ img {
 }
 
 .hero-sub-title {
-  font-size: 1.15rem;
+  font-size: 1.12rem;
   font-weight: 600;
   color: var(--deep-green);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.45rem;
 }
 
 .hero-en-sub {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   color: var(--text-light);
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.85rem;
   letter-spacing: 0.3px;
 }
 
 .hero-btn-group {
   display: flex;
-  gap: 1rem;
+  gap: 0.85rem;
   flex-wrap: wrap;
 }
 
@@ -350,7 +350,7 @@ img {
   position: relative;
   border-radius: var(--radius-sm);
   overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
 }
 
 .hero-image-wrapper img {
@@ -376,7 +376,7 @@ img {
    ========================================================================== */
 .naver-trust-strip {
   max-width: var(--max-w);
-  margin: 1.5rem auto 0;
+  margin: 1.75rem auto 0;
   padding: 0 1.5rem;
 }
 
@@ -384,18 +384,19 @@ img {
   background: #ffffff;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
-  padding: 0.85rem 1.75rem;
+  padding: 1rem 1.75rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1.25rem;
+  box-shadow: var(--shadow-subtle);
 }
 
 .naver-trust-left {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.15rem;
 }
 
 .naver-emblem-cluster {
@@ -420,7 +421,7 @@ img {
 }
 
 .naver-trust-text p {
-  font-size: 0.82rem;
+  font-size: 0.83rem;
   color: var(--text-muted);
 }
 
@@ -431,7 +432,7 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  padding: 6px 12px;
+  padding: 6px 14px;
   border: 1px solid var(--border);
   border-radius: 4px;
   background: var(--bg-main);
@@ -444,11 +445,11 @@ img {
 }
 
 /* ==========================================================================
-   SMART BLOCK (3×2 Grid on PC, 2×3 on Mobile)
+   SMART BLOCK (3×2 Grid on PC, 2×3 on Tablet, 1-2 on Mobile)
    ========================================================================== */
 .section-container {
   max-width: var(--max-w);
-  margin: 3.5rem auto 0;
+  margin: 4rem auto 0;
   padding: 0 1.5rem;
 }
 
