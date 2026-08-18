@@ -31,10 +31,10 @@
 
 ## 실시간 라이브 확인 주소 (Cloudflare)
 
-* 🇰🇷 **한국어 (KR)**: 👉 **[https://quarters-routing-rendered-rather.trycloudflare.com/](https://quarters-routing-rendered-rather.trycloudflare.com/)**
-* 🇺🇸 **English (EN)**: [https://quarters-routing-rendered-rather.trycloudflare.com/en/](https://quarters-routing-rendered-rather.trycloudflare.com/en/)
-* 🇨🇳 **中文 (ZH)**: [https://quarters-routing-rendered-rather.trycloudflare.com/zh/](https://quarters-routing-rendered-rather.trycloudflare.com/zh/)
-* 🇯🇵 **日本語 (JA)**: [https://quarters-routing-rendered-rather.trycloudflare.com/ja/](https://quarters-routing-rendered-rather.trycloudflare.com/ja/)
-* 🇫🇷 **Français (FR)**: [https://quarters-routing-rendered-rather.trycloudflare.com/fr/](https://quarters-routing-rendered-rather.trycloudflare.com/fr/)
-* 🇩🇪 **Deutsch (DE)**: [https://quarters-routing-rendered-rather.trycloudflare.com/de/](https://quarters-routing-rendered-rather.trycloudflare.com/de/)
-* 🇵🇹 **Português (PT)**: [https://quarters-routing-rendered-rather.trycloudflare.com/pt/](https://quarters-routing-rendered-rather.trycloudflare.com/pt/)
+* 🇰🇷 **한국어 (KR)**: 👉 **[https://smtp-navy-lounge-irrigation.trycloudflare.com/](https://smtp-navy-lounge-irrigation.trycloudflare.com/)**
+* 🇺🇸 **English (EN)**: [https://smtp-navy-lounge-irrigation.trycloudflare.com/en/](https://smtp-navy-lounge-irrigation.trycloudflare.com/en/)
+* 🇨🇳 **中文 (ZH)**: [https://smtp-navy-lounge-irrigation.trycloudflare.com/zh/](https://smtp-navy-lounge-irrigation.trycloudflare.com/zh/)
+* 🇯🇵 **日本語 (JA)**: [https://smtp-navy-lounge-irrigation.trycloudflare.com/ja/](https://smtp-navy-lounge-irrigation.trycloudflare.com/ja/)
+* 🇫🇷 **Français (FR)**: [https://smtp-navy-lounge-irrigation.trycloudflare.com/fr/](https://smtp-navy-lounge-irrigation.trycloudflare.com/fr/)
+* 🇩🇪 **Deutsch (DE)**: [https://smtp-navy-lounge-irrigation.trycloudflare.com/de/](https://smtp-navy-lounge-irrigation.trycloudflare.com/de/)
+* 🇵🇹 **Português (PT)**: [https://smtp-navy-lounge-irrigation.trycloudflare.com/pt/](https://smtp-navy-lounge-irrigation.trycloudflare.com/pt/)
