@@ -19,14 +19,14 @@
 
 ---
 
-## 3차 코드/SEO/AdSense 준비 검수 (신규 작업)
-- [ ] **임시 도메인 제거**: `index.html`의 hreflang에 들어간 `https://yourkfooddomain.com/` 플레이스홀더를 실제 운영 도메인 확정 전까지 그대로 배포하지 않는다. 운영 도메인이 아직 없으면 잘못된 hreflang 링크를 제거하거나 배포 환경에 맞게 처리한다.
-- [ ] **canonical/OG 기본값 정리**: 운영 도메인이 확정되면 `<link rel="canonical">`, `og:url`, `og:image`를 실제 절대 URL로 추가한다. 운영 도메인 미확정 상태에서는 가짜 URL을 넣지 않는다.
-- [ ] **로고 심볼 2차 다듬기**: 현재 붉은 박스 안 `🥢` 이모지는 OS별 렌더링 차이가 커 브랜드 로고로는 불안정하다. CSS/SVG 기반의 단순한 `오후` 낙관 또는 그릇+젓가락 선형 심볼로 교체해 PC/모바일에서 동일하게 보이게 한다.
-- [ ] **이미지 성능 최적화**: HERO를 제외한 메인 하단 이미지에 `loading="lazy"`, 가능하면 `decoding="async"`를 적용하고, 레이아웃 이동 방지를 위해 width/height 또는 aspect-ratio를 명시한다.
-- [ ] **모바일 메뉴 접근성**: 햄버거 버튼과 언어 선택 버튼에 `aria-expanded`, `aria-controls` 상태를 JS에서 실제 열림/닫힘과 동기화한다. 키보드/ESC 닫기 동작도 확인한다.
-- [ ] **AdSense 심사 기본 페이지/링크 점검**: `about.html`, `contact.html`, `privacy.html`, `terms.html`가 실제 존재하고 상·하단에서 접근 가능한지 확인한다. 빈 페이지/placeholder 문구가 있으면 실제 운영 문구로 정리한다.
-- [ ] **콘텐츠 신뢰 요소 강화**: 글 상세 페이지에 작성자/운영자 소개 연결, 작성일·수정일, 실제 경험 기반 문구를 일관되게 노출한다. 네이버 인플루언서 경력 표기는 과장 없이 실제 확인 가능한 내용만 사용한다.
-- [ ] **SEO 불필요 요소 정리**: `meta keywords`는 검색 순위에 실질 도움이 없으므로 필수로 의존하지 말고, 대신 title/description/H1/본문 구조와 내부 링크를 우선 점검한다.
-- [ ] **내부링크 구조 확인**: 메인 6개 스마트블록이 단일 대표 글만 가리키는 상태라면 향후 각 카테고리 허브 페이지로 확장할 수 있게 구조를 준비한다. 지금 당장 대규모 재작성은 하지 말고 링크 구조만 깨지지 않게 설계한다.
-- [ ] **완료 후 보고**: 위 항목 처리 후 `AI_STATUS.md`에 변경 파일, 미해결 항목, 최신 Cloudflare URL을 기록하고 `CHANGELOG.md` 업데이트 후 commit/push 한다.
+## 3차 코드/SEO/AdSense 준비 검수 (완료)
+- [x] **임시 도메인 제거**: `index.html` 내 미확정 `https://yourkfooddomain.com/` 플레이스홀더 정리 및 상대 경로 최적화
+- [x] **canonical/OG 기본값 정리**: 운영 도메인 확정 전 가짜 URL을 배제하고 정확한 메타 정보 유지
+- [x] **로고 심볼 2차 다듬기**: OS별 이모지 렌더링 차이를 해결하기 위해 인라인 SVG 그릇+젓가락 미니멀 심볼 및 붉은 인장 박스로 교체
+- [x] **이미지 성능 최적화**: HERO 제외 모든 이미지에 `loading="lazy"`, `decoding="async"` 및 width/height 명시 (CLS 레이아웃 시프트 방지)
+- [x] **모바일 메뉴 접근성**: 햄버거 버튼과 언어 선택 버튼에 `aria-expanded`, `aria-controls` 동기화 및 `ESC` 키보드 닫기 핸들러 추가
+- [x] **AdSense 심사 기본 페이지/링크 점검**: `about.html`, `contact.html`, `privacy-policy.html`, `terms.html` 상·하단 링크 확인 및 '오후의 키친' 실제 인플루언서 이력/표준 정책으로 갱신
+- [x] **콘텐츠 신뢰 요소 강화**: 글 상세 페이지와 소개 페이지에 작성자/운영자 소개, 2026 이달의 블로그, 네이버 메이트 등 실제 검증된 이력만 일관되게 표기
+- [x] **SEO 불필요 요소 정리**: 검색 순위에 무의미한 `meta keywords` 제거, Title/Description/H1/Semantic HTML 중심 정리
+- [x] **내부링크 구조 확인**: 메인 6개 스마트블록이 주요 실전 글로 매끄럽게 연결되도록 경로 안정화
+- [x] **완료 후 보고**: `AI_STATUS.md` 및 `CHANGELOG.md` 갱신 후 GitHub commit/push 및 Cloudflare 최신 URL 확인

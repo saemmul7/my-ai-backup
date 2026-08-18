@@ -5,25 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>오후의 키친 | 오늘도 맛있게, 한국의 집밥 이야기</title>
   <meta name="description" content="네이버 2026 이달의 블로그 & 네이버 메이트 공식 선정! 집에서 실패 없이 만드는 김밥, 남편 도시락, 코스트코 장보기, 매일 먹는 집밥과 반찬 이야기.">
-  <meta name="keywords" content="김밥, 도시락, 코스트코 장보기, 집밥, 반찬, 국, 찌개, 네이버 인플루언서, 오후의 키친">
-
-  <!-- Multi-Language Hreflang SEO -->
-  <link rel="alternate" hreflang="ko" href="https://yourkfooddomain.com/" />
-  <link rel="alternate" hreflang="en" href="https://yourkfooddomain.com/en/" />
-  <link rel="alternate" hreflang="zh" href="https://yourkfooddomain.com/zh/" />
-  <link rel="alternate" hreflang="ja" href="https://yourkfooddomain.com/ja/" />
-  <link rel="alternate" hreflang="fr" href="https://yourkfooddomain.com/fr/" />
-  <link rel="alternate" hreflang="de" href="https://yourkfooddomain.com/de/" />
-  <link rel="alternate" hreflang="pt" href="https://yourkfooddomain.com/pt/" />
-  <link rel="alternate" hreflang="x-default" href="https://yourkfooddomain.com/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="오후의 키친 | 오늘도 맛있게, 한국의 집밥 이야기">
-  <meta property="og:description" content="김밥 · 도시락 · 코스트코 장보기 · 매일 집밥 이야기.">
+  <meta property="og:description" content="김밥 · 도시락 · 코스트코 장보기 · 매일 집밥 이야기. 네이버 공식 인플루언서 매거진.">
   
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=2.3">
+  <link rel="stylesheet" href="css/style.css?v=3.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
@@ -37,17 +26,28 @@
 
   <div id="reading-progress"></div>
 
-  <!-- 1. HEADER (정갈한 한글 로고 & 6대 메뉴) -->
+  <!-- 1. HEADER (정갈한 SVG 인장 로고 & 6대 메뉴) -->
   <header class="site-header">
     <div class="nav-container">
-      <a href="index.html" class="brand-logo">
-        <span class="brand-seal-icon">🥢</span>
+      <a href="index.html" class="brand-logo" aria-label="오후의 키친 홈">
+        <span class="brand-seal-svg" aria-hidden="true">
+          <!-- Minimal Bowl & Chopsticks SVG Emblem -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 11c0 4.418 3.582 8 8 8s8-3.582 8-8H4z" fill="currentColor" fill-opacity="0.2"/>
+            <path d="M4 11h16" />
+            <path d="M9 19v2" />
+            <path d="M15 19v2" />
+            <path d="M9 21h6" />
+            <path d="M19 4L7 10" />
+            <path d="M21 7L7 10" />
+          </svg>
+        </span>
         오후의 키친
         <span>Korean Everyday Food</span>
       </a>
 
       <div class="nav-right-cluster">
-        <nav>
+        <nav aria-label="주요 메뉴">
           <ul class="nav-links" id="navLinks">
             <li><a href="index.html" class="active">홈</a></li>
             <li><a href="#cat-kimbap">김밥</a></li>
@@ -63,7 +63,7 @@
 
         <!-- Global Language Selector -->
         <div class="lang-selector">
-          <button class="lang-btn" id="langBtn" aria-label="언어 선택">
+          <button class="lang-btn" id="langBtn" aria-label="언어 선택" aria-expanded="false" aria-controls="langDropdown">
             🌐 KR ▾
           </button>
           <ul class="lang-dropdown" id="langDropdown">
@@ -77,7 +77,7 @@
           </ul>
         </div>
 
-        <button class="mobile-toggle" id="mobileToggle" aria-label="메뉴 열기">☰</button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="모바일 메뉴 열기" aria-expanded="false" aria-controls="navLinks">☰</button>
       </div>
     </div>
   </header>
@@ -97,7 +97,7 @@
       </div>
 
       <div class="hero-image-wrapper">
-        <img src="images/food-kimbap-1.png" alt="정갈한 집김밥과 도시락">
+        <img src="images/food-kimbap-1.png" alt="정갈한 집김밥과 도시락" width="600" height="380" fetchpriority="high">
         <div class="hero-image-caption">
           🍙 정성으로 말아낸 오늘의 집김밥과 따뜻한 밥상
         </div>
@@ -110,8 +110,8 @@
     <div class="naver-trust-box">
       <div class="naver-trust-left">
         <div class="naver-emblem-cluster">
-          <img src="images/badge-monthly-blog.png" alt="2026 이달의 블로그">
-          <img src="images/badge-naver-mate.png" alt="네이버 메이트 레시피">
+          <img src="images/badge-monthly-blog.png" alt="2026 이달의 블로그" width="120" height="32" loading="lazy" decoding="async">
+          <img src="images/badge-naver-mate.png" alt="네이버 메이트 레시피" width="120" height="32" loading="lazy" decoding="async">
         </div>
         <div class="naver-trust-text">
           <h4>NAVER Influencer</h4>
@@ -137,7 +137,7 @@
       <article class="smart-category-card" id="cat-kimbap">
         <a href="posts/post-kimbap-master.html">
           <div class="smart-cat-img-box">
-            <img src="images/food-kimbap-1.png" alt="김밥" class="smart-cat-img">
+            <img src="images/food-kimbap-1.png" alt="김밥" class="smart-cat-img" width="400" height="190" loading="lazy" decoding="async">
             <span class="smart-cat-pill">01</span>
           </div>
           <div class="smart-cat-info">
@@ -155,7 +155,7 @@
       <article class="smart-category-card" id="cat-lunchbox">
         <a href="posts/post-weekly-lunchbox.html">
           <div class="smart-cat-img-box">
-            <img src="images/food-kimbap-2.png" alt="도시락" class="smart-cat-img">
+            <img src="images/food-kimbap-2.png" alt="도시락" class="smart-cat-img" width="400" height="190" loading="lazy" decoding="async">
             <span class="smart-cat-pill">02</span>
           </div>
           <div class="smart-cat-info">
@@ -173,7 +173,7 @@
       <article class="smart-category-card" id="cat-costco">
         <a href="posts/post-costco-beef-guide.html">
           <div class="smart-cat-img-box">
-            <img src="images/food-costco-1.png" alt="코스트코 장보기" class="smart-cat-img">
+            <img src="images/food-costco-1.png" alt="코스트코 장보기" class="smart-cat-img" width="400" height="190" loading="lazy" decoding="async">
             <span class="smart-cat-pill">03</span>
           </div>
           <div class="smart-cat-info">
@@ -191,7 +191,7 @@
       <article class="smart-category-card" id="cat-homecook">
         <a href="posts/post-dried-pollack-egg-porridge.html">
           <div class="smart-cat-img-box">
-            <img src="images/food-kfood-3.png" alt="집밥" class="smart-cat-img">
+            <img src="images/food-kfood-3.png" alt="집밥" class="smart-cat-img" width="400" height="190" loading="lazy" decoding="async">
             <span class="smart-cat-pill">04</span>
           </div>
           <div class="smart-cat-info">
@@ -209,7 +209,7 @@
       <article class="smart-category-card" id="cat-banchan">
         <a href="posts/post-gochujang-jinmichae.html">
           <div class="smart-cat-img-box">
-            <img src="images/food-kfood-2.png" alt="반찬" class="smart-cat-img">
+            <img src="images/food-kfood-2.png" alt="반찬" class="smart-cat-img" width="400" height="190" loading="lazy" decoding="async">
             <span class="smart-cat-pill">05</span>
           </div>
           <div class="smart-cat-info">
@@ -227,7 +227,7 @@
       <article class="smart-category-card" id="cat-soup">
         <a href="posts/post-clam-soybean-soup.html">
           <div class="smart-cat-img-box">
-            <img src="images/food-kfood-1.png" alt="국과 찌개" class="smart-cat-img">
+            <img src="images/food-kfood-1.png" alt="국과 찌개" class="smart-cat-img" width="400" height="190" loading="lazy" decoding="async">
             <span class="smart-cat-pill">06</span>
           </div>
           <div class="smart-cat-info">
@@ -244,7 +244,7 @@
     </div>
   </section>
 
-  <!-- 5. EDITOR'S PICK (도시락 실질 콘텐츠 배치 완료) -->
+  <!-- 5. EDITOR'S PICK (도시락 실질 콘텐츠 전진 배치) -->
   <section class="section-container" id="editors-pick">
     <div class="section-head">
       <h2 class="section-title">에디터스 픽</h2>
@@ -256,7 +256,7 @@
       <article class="featured-lead-card">
         <a href="posts/post-kimbap-master.html">
           <div class="featured-lead-img-box">
-            <img src="images/food-kimbap-1.png" alt="집김밥의 정석">
+            <img src="images/food-kimbap-1.png" alt="집김밥의 정석" width="600" height="280" loading="lazy" decoding="async">
           </div>
           <div class="featured-lead-body">
             <span class="featured-lead-tag">FEATURED STORY</span>
@@ -268,12 +268,12 @@
         </a>
       </article>
 
-      <!-- Sub Picks List (도시락 + 코스트코 + 반찬) -->
+      <!-- Sub Picks List -->
       <div class="sub-picks-list">
-        <!-- 도시락 실제 콘텐츠 -->
+        <!-- 도시락 -->
         <article class="sub-pick-item">
           <div class="sub-pick-thumb">
-            <img src="images/food-kimbap-2.png" alt="남편 도시락">
+            <img src="images/food-kimbap-2.png" alt="남편 도시락" width="110" height="85" loading="lazy" decoding="async">
           </div>
           <div class="sub-pick-info">
             <h4><a href="posts/post-weekly-lunchbox.html">전날 준비해 아침에 바로 담는 남편 직장인 도시락</a></h4>
@@ -284,7 +284,7 @@
         <!-- 코스트코 -->
         <article class="sub-pick-item">
           <div class="sub-pick-thumb">
-            <img src="images/food-costco-1.png" alt="아롱사태 수육">
+            <img src="images/food-costco-1.png" alt="아롱사태 수육" width="110" height="85" loading="lazy" decoding="async">
           </div>
           <div class="sub-pick-info">
             <h4><a href="posts/post-costco-beef-guide.html">코스트코 아롱사태 삶는법 & 만능 육수 소고기뭇국</a></h4>
@@ -295,7 +295,7 @@
         <!-- 반찬 -->
         <article class="sub-pick-item">
           <div class="sub-pick-thumb">
-            <img src="images/food-kfood-2.png" alt="고추장 진미채볶음">
+            <img src="images/food-kfood-2.png" alt="고추장 진미채볶음" width="110" height="85" loading="lazy" decoding="async">
           </div>
           <div class="sub-pick-info">
             <h4><a href="posts/post-gochujang-jinmichae.html">마요네즈 없이 부드러운 고추장 진미채볶음</a></h4>
@@ -306,7 +306,7 @@
     </div>
   </section>
 
-  <!-- 6. LATEST STORIES (도시락 포함 담백한 카피) -->
+  <!-- 6. LATEST STORIES -->
   <section class="section-container">
     <div class="section-head">
       <h2 class="section-title">최신 집밥 이야기</h2>
@@ -316,7 +316,7 @@
     <div class="recipe-cards-grid-4">
       <article class="recipe-card-clean">
         <a href="posts/post-weekly-lunchbox.html">
-          <div class="recipe-card-img-box"><img src="images/food-kimbap-2.png" alt="직장인 도시락"></div>
+          <div class="recipe-card-img-box"><img src="images/food-kimbap-2.png" alt="직장인 도시락" width="300" height="160" loading="lazy" decoding="async"></div>
           <div class="recipe-card-body">
             <span class="recipe-card-tag">도시락</span>
             <h3 class="recipe-card-title">일주일 직장인 집밥 도시락 반찬 5가지</h3>
@@ -328,7 +328,7 @@
 
       <article class="recipe-card-clean">
         <a href="posts/post-mukeunji-tuna-kimbap.html">
-          <div class="recipe-card-img-box"><img src="images/food-kimbap-1.png" alt="묵은지 참치김밥"></div>
+          <div class="recipe-card-img-box"><img src="images/food-kimbap-1.png" alt="묵은지 참치김밥" width="300" height="160" loading="lazy" decoding="async"></div>
           <div class="recipe-card-body">
             <span class="recipe-card-tag">김밥</span>
             <h3 class="recipe-card-title">묵은지 참치김밥: 개운하고 고소한 맛</h3>
@@ -340,7 +340,7 @@
 
       <article class="recipe-card-clean">
         <a href="posts/post-soy-fishcake.html">
-          <div class="recipe-card-img-box"><img src="images/food-kfood-3.png" alt="간장 어묵 야채볶음"></div>
+          <div class="recipe-card-img-box"><img src="images/food-kfood-3.png" alt="간장 어묵 야채볶음" width="300" height="160" loading="lazy" decoding="async"></div>
           <div class="recipe-card-body">
             <span class="recipe-card-tag">반찬</span>
             <h3 class="recipe-card-title">촉촉하게 볶아내는 간장 어묵 야채볶음</h3>
@@ -352,7 +352,7 @@
 
       <article class="recipe-card-clean">
         <a href="posts/post-salted-eggplant-stirfry.html">
-          <div class="recipe-card-img-box"><img src="images/food-kfood-2.png" alt="꼬들 가지볶음"></div>
+          <div class="recipe-card-img-box"><img src="images/food-kfood-2.png" alt="꼬들 가지볶음" width="300" height="160" loading="lazy" decoding="async"></div>
           <div class="recipe-card-body">
             <span class="recipe-card-tag">반찬</span>
             <h3 class="recipe-card-title">물컹거림 없이 쫄깃한 절인 가지볶음</h3>
@@ -372,7 +372,7 @@
     </div>
   </div>
 
-  <!-- 8. POPULAR CONTENTS (담백한 생활형 카피) -->
+  <!-- 8. POPULAR CONTENTS -->
   <section class="section-container">
     <div class="section-head">
       <h2 class="section-title">인기 레시피</h2>
@@ -382,7 +382,7 @@
     <div class="recipe-cards-grid-4">
       <article class="recipe-card-clean">
         <a href="posts/post-clam-soybean-soup.html">
-          <div class="recipe-card-img-box"><img src="images/food-kfood-1.png" alt="맛조개 된장찌개"></div>
+          <div class="recipe-card-img-box"><img src="images/food-kfood-1.png" alt="맛조개 된장찌개" width="300" height="160" loading="lazy" decoding="async"></div>
           <div class="recipe-card-body">
             <span class="recipe-card-tag">국·찌개</span>
             <h3 class="recipe-card-title">맛조개 된장찌개: 뽀얀 천연 육수</h3>
@@ -394,7 +394,7 @@
 
       <article class="recipe-card-clean">
         <a href="posts/post-dried-pollack-egg-porridge.html">
-          <div class="recipe-card-img-box"><img src="images/food-kfood-3.png" alt="황태계란죽"></div>
+          <div class="recipe-card-img-box"><img src="images/food-kfood-3.png" alt="황태계란죽" width="300" height="160" loading="lazy" decoding="async"></div>
           <div class="recipe-card-body">
             <span class="recipe-card-tag">집밥</span>
             <h3 class="recipe-card-title">바쁜 아침, 속 편한 황태계란죽</h3>
@@ -406,7 +406,7 @@
 
       <article class="recipe-card-clean">
         <a href="posts/post-nogak-muchim.html">
-          <div class="recipe-card-img-box"><img src="images/food-kfood-2.png" alt="오이노각무침"></div>
+          <div class="recipe-card-img-box"><img src="images/food-kfood-2.png" alt="오이노각무침" width="300" height="160" loading="lazy" decoding="async"></div>
           <div class="recipe-card-body">
             <span class="recipe-card-tag">반찬</span>
             <h3 class="recipe-card-title">오도독 아삭하게 무쳐내는 오이노각무침</h3>
@@ -418,7 +418,7 @@
 
       <article class="recipe-card-clean">
         <a href="posts/post-ricecooker-corn.html">
-          <div class="recipe-card-img-box"><img src="images/food-kfood-1.png" alt="전기밥솥 옥수수"></div>
+          <div class="recipe-card-img-box"><img src="images/food-kfood-1.png" alt="전기밥솥 옥수수" width="300" height="160" loading="lazy" decoding="async"></div>
           <div class="recipe-card-body">
             <span class="recipe-card-tag">집밥 간식</span>
             <h3 class="recipe-card-title">전기밥솥으로 편하게 찌는 찰옥수수</h3>
@@ -440,7 +440,7 @@
     <div class="recipe-cards-grid-4">
       <article class="recipe-card-clean">
         <a href="posts/post-costco-salmon-jang.html">
-          <div class="recipe-card-img-box"><img src="images/food-costco-2.png" alt="간장 연어장"></div>
+          <div class="recipe-card-img-box"><img src="images/food-costco-2.png" alt="간장 연어장" width="300" height="160" loading="lazy" decoding="async"></div>
           <div class="recipe-card-body">
             <span class="recipe-card-tag">코스트코</span>
             <h3 class="recipe-card-title">코스트코 생연어로 만드는 간장 연어장</h3>
@@ -452,7 +452,7 @@
 
       <article class="recipe-card-clean">
         <a href="posts/post-bulgogi-marinade.html">
-          <div class="recipe-card-img-box"><img src="images/food-kfood-3.png" alt="소불고기 마리네이드"></div>
+          <div class="recipe-card-img-box"><img src="images/food-kfood-3.png" alt="소불고기 마리네이드" width="300" height="160" loading="lazy" decoding="async"></div>
           <div class="recipe-card-body">
             <span class="recipe-card-tag">집밥 고기</span>
             <h3 class="recipe-card-title">배와 양파로 재우는 소불고기 & LA갈비</h3>
@@ -464,7 +464,7 @@
 
       <article class="recipe-card-clean">
         <a href="posts/post-kimchi-making-guide.html">
-          <div class="recipe-card-img-box"><img src="images/food-kfood-2.png" alt="배추김치"></div>
+          <div class="recipe-card-img-box"><img src="images/food-kfood-2.png" alt="배추김치" width="300" height="160" loading="lazy" decoding="async"></div>
           <div class="recipe-card-body">
             <span class="recipe-card-tag">김치</span>
             <h3 class="recipe-card-title">아삭함이 살아있는 기본 배추김치 담그기</h3>
@@ -476,7 +476,7 @@
 
       <article class="recipe-card-clean">
         <a href="posts/post-galbi-jeongol-soup.html">
-          <div class="recipe-card-img-box"><img src="images/food-kfood-1.png" alt="사골 갈비전골"></div>
+          <div class="recipe-card-img-box"><img src="images/food-kfood-1.png" alt="사골 갈비전골" width="300" height="160" loading="lazy" decoding="async"></div>
           <div class="recipe-card-body">
             <span class="recipe-card-tag">국·찌개</span>
             <h3 class="recipe-card-title">사골 육수로 끓이는 갈비전골 보양식</h3>
@@ -516,7 +516,16 @@
   <footer class="site-footer">
     <div class="footer-container">
       <div class="footer-brand">
-        <h3><span class="brand-seal-icon" style="font-size:0.75rem; width:22px; height:22px; vertical-align:middle; margin-right:4px;">🥢</span> 오후의 키친</h3>
+        <h3>
+          <span class="brand-seal-svg" style="width:22px; height:22px; vertical-align:middle; margin-right:4px; display:inline-flex;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 11c0 4.418 3.582 8 8 8s8-3.582 8-8H4z" fill="currentColor" fill-opacity="0.2"/>
+              <path d="M4 11h16" />
+              <path d="M19 4L7 10" />
+            </svg>
+          </span>
+          오후의 키친
+        </h3>
         <p>네이버 공식 인플루언서가 전하는 정갈한 한국의 집밥, 김밥, 도시락, 코스트코 식재료 이야기.</p>
       </div>
       <div class="footer-nav">

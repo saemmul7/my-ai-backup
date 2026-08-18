@@ -3,16 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>사이트 소개 (About Us) | K-Food Insight</title>
-  <meta name="description" content="K-Food Insight의 미션과 전문 에디토리얼 팀을 소개합니다.">
-  <link rel="stylesheet" href="css/style.css">
+  <title>소개 (About Us) | 오후의 키친</title>
+  <meta name="description" content="네이버 2026 이달의 블로그 & 네이버 메이트 공식 선정 푸드 크리에이터, '오후의 키친' 매거진을 소개합니다.">
+  <link rel="stylesheet" href="css/style.css?v=3.0">
 </head>
 <body>
   <div id="reading-progress"></div>
   <header class="site-header">
     <div class="nav-container">
-      <a href="index.html" class="brand-logo">🥢 K-Food <span>Insight</span></a>
-      <button class="mobile-toggle" id="mobileToggle">☰</button>
+      <a href="index.html" class="brand-logo">
+        <span class="brand-seal-svg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 11c0 4.418 3.582 8 8 8s8-3.582 8-8H4z" fill="currentColor" fill-opacity="0.2"/>
+            <path d="M4 11h16" />
+            <path d="M19 4L7 10" />
+          </svg>
+        </span>
+        오후의 키친
+        <span>Korean Everyday Food</span>
+      </a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="메뉴 열기">☰</button>
       <nav>
         <ul class="nav-links" id="navLinks">
           <li><a href="index.html">홈</a></li>
@@ -24,35 +34,44 @@
     </div>
   </header>
 
-  <div class="main-layout full-width">
-    <main class="page-container">
-      <h1 class="page-title">📖 About K-Food Insight</h1>
-      
-      <div class="article-content" style="border: none; padding: 0; box-shadow: none;">
-        <p><strong>K-Food Insight</strong>는 수천 년 동안 이어져 내려온 한국 전통 음식의 역사, 발효의 과학적 원리, 그리고 현대적으로 재해석된 글로벌 K-푸드 트렌드를 깊이 있게 조명하는 전문 온라인 푸드 매거진입니다.</p>
+  <div class="main-layout full-width" style="max-width: 900px; margin: 2.5rem auto; padding: 0 1.5rem;">
+    <main>
+      <article class="article-content" style="background:#ffffff; padding:2.5rem; border-radius:8px; border:1px solid var(--border);">
+        <h1 style="font-family: var(--font-serif); font-size:2rem; color:var(--ink-dark); margin-bottom:1rem;">📖 오후의 키친 (Afternoon Kitchen) 소개</h1>
+        
+        <p style="font-size:1.05rem; line-height:1.8; color:var(--text-main); margin-bottom:1.5rem;">
+          <strong>오후의 키친</strong>은 네이버 공식 인플루언서가 직접 요리하고 기록하는 <strong>한국 생활형 음식 및 집밥 콘텐츠 허브</strong>입니다.
+          가족을 위한 따뜻한 아침 집김밥, 정갈한 남편 직장인 도시락, 대용량 코스트코 식재료 알뜰 소분법, 그리고 매일 밥상에 오르는 든든한 밑반찬과 국물 요리를 전합니다.
+        </p>
 
-        <h2>🎯 우리의 미션 (Our Mission)</h2>
-        <p>한식은 단순한 한 끼 식사를 넘어, 자연의 시간에 순응하는 <strong>‘발효’</strong>와 오행(五行)에 기반한 <strong>‘영양학적 조화’</strong>를 담고 있습니다. K-Food Insight는 다음과 같은 목표로 콘텐츠를 제작합니다.</p>
-        <ul>
-          <li><strong>정확한 정보 전달:</strong> 전통 조리법의 정통성을 보존하고, 근거 있는 조리 팁을 제공합니다.</li>
-          <li><strong>과학적 접근:</strong> 김치, 된장, 고추장 등 발효식품의 유산균과 효능을 과학적으로 설명합니다.</li>
-          <li><strong>글로벌 소통:</strong> 한국인뿐만 아니라 전 세계인이 쉽게 이해하고 따라 할 수 있는 가이드를 제시합니다.</li>
+        <h2 style="font-size:1.35rem; margin:1.75rem 0 0.75rem; color:var(--deep-green);">🏆 공식 활동 이력 & 크레딧</h2>
+        <ul style="margin-left:1.25rem; line-height:1.9; color:var(--text-main);">
+          <li><strong>네이버 인플루언서:</strong> 푸드/레시피 공식 인플루언서</li>
+          <li><strong>2026 이달의 블로그:</strong> 네이버 선정 요리·레시피 부문 우수 블로그</li>
+          <li><strong>네이버 메이트 (Naver Mate):</strong> 공식 레시피 크리에이터</li>
+          <li><strong>네이버 푸드 판 메인:</strong> 집밥 레시피 및 김밥/도시락 다수 메인 노출</li>
         </ul>
 
-        <h2>👩‍🍳 에디토리얼 팀 (Editorial Team)</h2>
-        <p>본 사이트의 모든 아티클은 한식 조리 기능사, 푸드 스타일리스트, 식품 영양학 연구자들의 검토와 자문을 거쳐 발행됩니다. 독자 여러분에게 가장 신뢰할 수 있는 미식 경험을 전해드리기 위해 끊임없이 연구합니다.</p>
+        <h2 style="font-size:1.35rem; margin:1.75rem 0 0.75rem; color:var(--deep-green);">🍳 콘텐츠 원칙 (Editorial Standard)</h2>
+        <p style="line-height:1.8; color:var(--text-muted);">
+          1. <strong>100% 직접 조리 & 실사 촬영:</strong> 모든 요리는 가정 주방에서 직접 만들어보고 검증된 재료 비율과 팁만을 작성합니다.<br>
+          2. <strong>쉬운 조리법과 현실적인 팁:</strong> 거창하고 복잡한 기술 대신, 누구나 집에서 바로 따라 할 수 있는 실전 노하우를 담습니다.<br>
+          3. <strong>글로벌 K-Food 허브:</strong> 한국어를 비롯하여 영어, 중국어, 일본어, 프랑스어, 독일어, 포르투갈어 다국어 독자들과 소통합니다.
+        </p>
 
-        <div class="info-box">
-          <h4>📬 문의 및 협업 제안</h4>
-          <p>콘텐츠 제휴, 레시피 검수, 기타 문의 사항은 <a href="contact.html" style="color: var(--primary); font-weight: bold;">문의하기(Contact Us)</a> 페이지를 통해 언제든지 남겨주세요.</p>
+        <div style="margin-top:2rem; padding:1.25rem; background:var(--bg-main); border-left:4px solid var(--seal-red); border-radius:4px;">
+          <h4 style="color:var(--seal-red); margin-bottom:0.4rem;">📬 문의 및 협업</h4>
+          <p style="font-size:0.92rem; color:var(--text-main); margin:0;">
+            레시피 관련 질문, 콘텐츠 제휴, 기타 문의는 <a href="contact.html" style="color:var(--deep-green); font-weight:bold; text-decoration:underline;">문의하기 (Contact Us)</a>를 통해 남겨주세요.
+          </p>
         </div>
-      </div>
+      </article>
     </main>
   </div>
 
   <footer class="site-footer">
     <div class="footer-bottom">
-      <p>&copy; 2026 K-Food Insight. All rights reserved.</p>
+      <p>&copy; 2026 오후의 키친. All rights reserved.</p>
     </div>
   </footer>
   <script src="js/main.js"></script>
