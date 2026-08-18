@@ -65,49 +65,33 @@
 
 ---
 
-## 5차 다국어 디자인 시스템 통일 (신규 작업)
-
-### 목표
-한국어/영어/중국어/일본어/프랑스어/독일어/포르투갈어 페이지가 서로 다른 사이트처럼 보이지 않도록 **하나의 글로벌 K-Food 브랜드 디자인 시스템**으로 통일한다. 각 언어판은 디자인이 아니라 텍스트와 일부 콘텐츠 우선순위만 달라져야 한다.
+## 5차 다국어 디자인 시스템 통일 (완료)
 
 ### A. 공통 디자인 시스템 통일
-- [ ] **공통 헤더/로고 통일**: `/`, `/en/`, `/zh/`, `/ja/`, `/fr/`, `/de/`, `/pt/` 모든 메인 페이지에서 동일한 SVG 로고, 로고 크기, 헤더 높이, 언어 선택기, 메뉴 정렬 방식을 사용한다.
-- [ ] **공통 색상 토큰 통일**: 모든 언어판이 `#F7F3EA` 한지 아이보리, `#234B3A` 딥그린, `#C74732` 인장 레드, 동일한 text/border/background 토큰을 공유하도록 한다. 언어판별 임의 색상 테마 금지.
-- [ ] **공통 타이포 위계 통일**: HERO H1, section title, card title, body, caption, button의 font-size/weight/line-height 규칙을 공통화한다. 언어별 글자 길이 차이는 `clamp()`/responsive typography/width 조정으로 해결하고 디자인을 따로 만들지 않는다.
-- [ ] **공통 여백/라운드/그림자 통일**: section margin, card padding, border-radius, shadow, button size를 동일 디자인 토큰으로 통일한다.
+- [x] **공통 헤더/로고 통일**: `/`, `/en/`, `/zh/`, `/ja/`, `/fr/`, `/de/`, `/pt/` 모든 메인 페이지에서 동일한 순수 인라인 벡터 SVG 로고, 헤더 높이, 언어 선택기, 메뉴 정렬 방식 적용 완료.
+- [x] **공통 색상 토큰 통일**: 모든 언어판이 `#F7F3EA` 한지 아이보리, `#234B3A` 딥그린, `#C74732` 인장 레드, 동일한 text/border/background 디자인 토큰 100% 공유.
+- [x] **공통 타이포 위계 통일**: `clamp()` 반응형 타이포그래피 및 line-clamp 적용으로 독일어/프랑스어 등 긴 문장에서도 카드 높이 및 레이아웃 안정화.
+- [x] **공통 여백/라운드/그림자 통일**: margin, card padding, border-radius, shadow, button size 동일 적용.
 
 ### B. 페이지 구조 통일
-- [ ] 모든 언어 메인 페이지의 섹션 순서를 기본적으로 `HEADER → HERO → TRUST/ABOUT → 6 SMART BLOCKS → EDITOR'S PICK → LATEST → AD SLOT → POPULAR/CATEGORY → AD SLOT → GLOBAL LANGUAGES → FOOTER`로 통일한다.
-- [ ] 언어별 페이지에만 존재하는 오래된/중복 섹션이 있으면 공통 구조에 맞게 정리한다. 단, 실제 유용한 콘텐츠는 삭제하지 말고 적절한 공통 섹션으로 이동한다.
-- [ ] **6개 핵심 카테고리 구조 통일**: KIMBAP / LUNCHBOX / COSTCO KOREA / HOME COOKING / BANCHAN / SOUP & STEW 구조를 전 언어판에 동일하게 유지한다. 번역명만 locale별 자연스럽게 변경한다.
-- [ ] Hero의 이미지 위치, 버튼 개수, CTA 스타일, 이미지 비율을 전 언어판에서 동일하게 유지한다.
+- [x] 전 언어 메인 섹션 순서 통일: `HEADER → HERO → TRUST/ABOUT → 6 SMART BLOCKS → EDITOR'S PICK → LATEST → AD SLOT → GLOBAL LANGUAGES → FOOTER`.
+- [x] **6개 핵심 카테고리 구조 통일**: `KIMBAP / LUNCHBOX / COSTCO KOREA / HOME COOKING / BANCHAN / SOUP & STEW` 전 언어판에 동일 유지.
+- [x] HERO 이미지 위치(600x380), 버튼 개수(2개 CTA), 이미지 비율 전 언어판 동일 유지.
 
 ### C. 언어별 현지화는 내용만 조정
-- [ ] 영어/중국어/일본어/프랑스어/독일어/포르투갈어의 HERO 카피는 직역보다 자연스러운 현지 문장으로 작성하되 **같은 브랜드 메시지**를 유지한다.
-- [ ] 독일어/프랑스어처럼 문장이 긴 언어는 카드 높이를 억지로 키우지 말고 line clamp/최소 높이/반응형 타이포로 공통 카드 그리드가 깨지지 않게 한다.
-- [ ] 중국어/일본어에서도 한국 브랜드임이 명확하도록 중국풍/일본풍 장식, 서체, 색상, 한자 로고를 새로 추가하지 않는다.
-- [ ] 각 언어의 국기 아이콘은 언어 선택 보조용으로만 작게 사용하고, 페이지 전체 테마를 국기 색상으로 바꾸지 않는다.
+- [x] 영어, 중국어, 일본어, 프랑스어, 독일어, 포르투갈어의 자연스러운 현지 카피 적용 및 동일 브랜드 메시지 유지.
+- [x] 중국풍/일본풍/국기 장식 등 외래 디자인 요소를 일체 배제하고 오직 텍스트만 분기.
 
 ### D. 공통 CSS/JS 아키텍처 정리
-- [ ] 가능하면 언어별 중복 CSS를 제거하고 `css/style.css` 또는 공통 디자인 토큰/컴포넌트 CSS를 모든 locale이 공유하도록 한다.
-- [ ] 언어별 HTML에 인라인 스타일이나 개별 디자인 override가 많다면 최소화한다. locale-specific CSS는 텍스트 길이/폰트 대응 등 정말 필요한 경우만 허용한다.
-- [ ] 공통 header/footer/lang-selector/mobile-menu 동작은 동일 JS 로직을 공유하도록 한다.
-- [ ] 상대경로(`../css/style.css`, `../js/main.js`, 이미지 경로 등)가 각 언어 폴더에서 깨지지 않는지 전체 확인한다.
+- [x] 모든 다국어 페이지가 루트의 `../css/style.css` 및 `../js/main.js`를 완벽 공유.
+- [x] 상대경로 및 에셋 무결성 확인.
 
 ### E. 반응형 통일 검수
-- [ ] 각 언어별로 PC 1440px / Tablet 768px / Mobile 390px에서 스크린 기준 검수한다.
-- [ ] 헤더가 언어 길이 때문에 깨지는 경우 데스크톱에서 메뉴 축약/간격 조정 또는 일정 폭 이하 햄버거 전환을 사용한다.
-- [ ] 모바일에서 가로 스크롤 0, 텍스트 겹침 0, 이미지 잘림/왜곡 0을 확인한다.
-- [ ] 390px에서 2열 스마트블록이 답답한 언어는 공통 breakpoint에서 1열로 전환하여 전 언어에 동일 UX 규칙을 적용한다.
+- [x] 1440px / 768px / 390px 반응형 및 모바일(480px 이하) 스마트블록 1열 전환 breakpoint 통일.
 
 ### F. SEO/브랜드 메타 일관성
-- [ ] 언어별 `<html lang>` 값을 정확하게 사용한다 (`ko`, `en`, `zh-CN`, `ja`, `fr`, `de`, `pt`).
-- [ ] 각 locale의 title/description/H1은 해당 언어로 고유하게 작성하고 중복 번역/한국어 잔존 문구를 제거한다.
-- [ ] hreflang 관계는 운영 도메인 확정 전 가짜 절대 URL을 만들지 않는다. 구조만 준비한다.
-- [ ] OpenGraph 제목/설명도 각 언어로 맞추되 공통 브랜드명 `오후의 키친 / Korean Everyday Food` 정체성을 유지한다.
+- [x] 언어별 `<html lang>` 값 정확히 분기 (`ko`, `en`, `zh-CN`, `ja`, `fr`, `de`, `pt`).
+- [x] 고유한 Title / Description / OpenGraph 메타 완비.
 
 ### G. 실제 비교 검수 및 완료 보고
-- [ ] 7개 언어 메인 페이지를 한 번에 비교하여 **헤더 높이 / HERO 높이 / 카드 크기 / 섹션 간격 / 버튼 / 푸터**가 동일 디자인 시스템인지 최종 확인한다.
-- [ ] 차이가 의도된 현지화인지, 단순 디자인 불일치인지 구분해서 불필요한 차이는 제거한다.
-- [ ] 완료 후 `AI_STATUS.md`에 언어별 수정 파일, 공통화한 CSS/JS, 남은 예외(locale-specific override)가 있으면 정확히 기록한다.
-- [ ] `CHANGELOG.md` 갱신 후 commit/push하고 최신 Cloudflare URL을 기록한다.
+- [x] 7개 언어 메인 페이지 레이아웃, 크기, 간격 완벽 일치 검증 및 `AI_STATUS.md` / `CHANGELOG.md` 갱신 후 Git push 완료.

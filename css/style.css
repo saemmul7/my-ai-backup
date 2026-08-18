@@ -285,25 +285,28 @@ img {
 
 .hero-main-title {
   font-family: var(--font-serif);
-  font-size: 2.5rem;
+  font-size: clamp(1.85rem, 4vw, 2.5rem);
   font-weight: 700;
   color: var(--ink-dark);
-  line-height: 1.35;
-  margin-bottom: 1.25rem;
-  letter-spacing: -1px;
+  line-height: 1.3;
+  margin-bottom: 1.15rem;
+  letter-spacing: -0.5px;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 .hero-sub-title {
-  font-size: 1.12rem;
+  font-size: clamp(1rem, 2vw, 1.12rem);
   font-weight: 600;
   color: var(--deep-green);
   margin-bottom: 0.45rem;
+  line-height: 1.4;
 }
 
 .hero-en-sub {
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   color: var(--text-light);
-  margin-bottom: 1.85rem;
+  margin-bottom: 1.75rem;
   letter-spacing: 0.3px;
 }
 
@@ -555,26 +558,32 @@ img {
   align-items: baseline;
   gap: 8px;
   margin-bottom: 0.4rem;
+  flex-wrap: wrap;
 }
 
 .smart-cat-title {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 800;
   color: var(--ink-dark);
 }
 
 .smart-cat-en {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   color: var(--text-light);
   font-weight: 700;
   text-transform: uppercase;
 }
 
 .smart-cat-desc {
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   color: var(--text-muted);
   line-height: 1.5;
   margin-bottom: 0.75rem;
+  min-height: 2.6em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .smart-cat-link {
@@ -1000,5 +1009,13 @@ img {
   }
   .recipe-cards-grid-4 {
     grid-template-columns: 1fr;
+  }
+  .hero-btn-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  .btn-editorial-primary, .btn-editorial-outline {
+    width: 100%;
+    justify-content: center;
   }
 }
