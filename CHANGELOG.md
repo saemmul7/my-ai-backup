@@ -65,7 +65,7 @@
 - **Modern Korean Food Magazine 테마 적용**:
   - 배경색: 밝은 한지 아이보리 `#F7F3EA`
   - 포인트 컬러: 딥 그린 `#234B3A`, 낙관 레드 `#C74732`
-  - 먹선 경계 `#E2DBD0` 및 붉은 낙관 도장(`食`) 뱃지 도입
+  - 먹선 경계 `#E2DBD0` 및 붉은 낙관 도장(순수 벡터 SVG 그릇+젓가락) 뱃지 도입
 - **모바일 반응형 최적화**: 1440px / 1024px / 768px / 390px 반응형 CSS Grid 구축
 
 ### 📐 정보 구조 (Information Architecture)
