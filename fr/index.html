@@ -3,40 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>K-Food Insight | Cuisine Coréenne Authentique, Kimbap & Guide Culinaire</title>
-  <meta name="description" content="Magazine culinaire coréen officiel par un influenceur Naver récompensé. Découvrez les vraies recettes de Kimbap, plats fermentés et astuces cuisine du quotidien.">
-  
-  <link rel="alternate" hreflang="ko" href="https://yourkfooddomain.com/" />
-  <link rel="alternate" hreflang="en" href="https://yourkfooddomain.com/en/" />
-  <link rel="alternate" hreflang="zh" href="https://yourkfooddomain.com/zh/" />
-  <link rel="alternate" hreflang="ja" href="https://yourkfooddomain.com/ja/" />
-  <link rel="alternate" hreflang="fr" href="https://yourkfooddomain.com/fr/" />
-  <link rel="alternate" hreflang="de" href="https://yourkfooddomain.com/de/" />
-  <link rel="alternate" hreflang="pt" href="https://yourkfooddomain.com/pt/" />
-  <link rel="alternate" hreflang="x-default" href="https://yourkfooddomain.com/" />
+  <title>Afternoon Kitchen | Cuisine Coréenne Maison au Quotidien</title>
+  <meta name="description" content="Créatrice culinaire officielle NAVER Blog du Mois 2026. Recettes authentiques de Kimbap, Bento lunchbox, astuces Costco et cuisine familiale coréenne.">
 
-  <link rel="stylesheet" href="../css/style.css">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Afternoon Kitchen | Cuisine Coréenne Maison au Quotidien">
+  <meta property="og:description" content="Kimbap · Bento · Ingrédients Costco · Cuisine Coréenne Maison. Magazine officiel NAVER.">
+  
+  <link rel="stylesheet" href="../css/style.css?v=4.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <div id="reading-progress"></div>
+
+  <!-- 1. HEADER -->
   <header class="site-header">
     <div class="nav-container">
-      <a href="index.html" class="brand-logo">🥢 K-Food <span>Insight</span><span class="brand-badge">Français</span></a>
+      <a href="index.html" class="brand-logo" aria-label="Afternoon Kitchen Accueil">
+        <span class="brand-seal-svg" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 11c0 4.418 3.582 8 8 8s8-3.582 8-8H4z" fill="currentColor" fill-opacity="0.2"/>
+            <path d="M4 11h16" />
+            <path d="M19 4L7 10" />
+          </svg>
+        </span>
+        Afternoon Kitchen
+        <span>Korean Everyday Food</span>
+      </a>
+
       <div class="nav-right-cluster">
-        <nav>
+        <nav aria-label="Menu principal">
           <ul class="nav-links" id="navLinks">
             <li><a href="index.html" class="active">Accueil</a></li>
-            <li><a href="#block-kimbap">Kimbap</a></li>
-            <li><a href="#block-banchan">Banchan</a></li>
-            <li><a href="../about.html">À propos</a></li>
+            <li><a href="#cat-kimbap">Kimbap</a></li>
+            <li><a href="#cat-lunchbox">Bento</a></li>
+            <li><a href="#cat-costco">Costco</a></li>
+            <li><a href="#cat-homecook">Cuisine Maison</a></li>
+            <li><a href="#cat-banchan">Banchan</a></li>
+            <li><a href="#cat-soup">Soupes</a></li>
+            <li><a href="../about.html">À Propos</a></li>
             <li><a href="../contact.html">Contact</a></li>
           </ul>
         </nav>
 
+        <!-- Global Language Selector -->
         <div class="lang-selector">
-          <button class="lang-btn" id="langBtn">🌐 Français (FR) ▾</button>
+          <button class="lang-btn" id="langBtn" aria-label="Choisir la langue" aria-expanded="false" aria-controls="langDropdown">
+            🌐 FR ▾
+          </button>
           <ul class="lang-dropdown" id="langDropdown">
-            <li><a href="../index.html">🇰🇷 한국어 (KO)</a></li>
+            <li><a href="../index.html">🇰🇷 한국어 (KR)</a></li>
             <li><a href="../en/index.html">🇺🇸 English (EN)</a></li>
             <li><a href="../zh/index.html">🇨🇳 中文 (ZH)</a></li>
             <li><a href="../ja/index.html">🇯🇵 日本語 (JA)</a></li>
@@ -45,93 +65,353 @@
             <li><a href="../pt/index.html">🇵🇹 Português (PT)</a></li>
           </ul>
         </div>
-        <button class="mobile-toggle" id="mobileToggle">☰</button>
+
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navLinks">☰</button>
       </div>
     </div>
   </header>
 
-  <section class="hero-smart">
-    <div class="hero-smart-container">
+  <!-- 2. HERO -->
+  <section class="hero-editorial">
+    <div class="hero-editorial-card">
       <div>
-        <div class="badge-banner-smart">
-          <img src="../images/badge-monthly-blog.png" alt="Blog du mois 2026">
-          <img src="../images/badge-naver-mate.png" alt="Créateur officiel">
-          <span>🏆 Influenceur Culinaire Officiel Certifié</span>
-        </div>
-        <h1 class="hero-title-smart">Cuisine Coréenne Authentique<br><span>Sélection Intelligente de Recettes</span></h1>
-        <p class="hero-desc-smart">Apprenez les secrets de la gastronomie coréenne faits maison. Du Kimbap inratable aux bienfaits de la fermentation millénaire.</p>
-        <div class="smart-chips">
-          <a href="#block-kimbap" class="smart-chip">🍙 Guide Kimbap</a>
-          <a href="#block-banchan" class="smart-chip">🥘 Banchan Faciles</a>
+        <span class="hero-tagline">✦ DAILY KITCHEN STORIES</span>
+        <h1 class="hero-main-title">Cuisinez Gourmand,<br>La Table Coréenne</h1>
+        <p class="hero-sub-title">Kimbap · Bento · Astuces Costco · Plats du Quotidien</p>
+        <p class="hero-en-sub">Korean Everyday Food & Lifestyle Magazine</p>
+        <div class="hero-btn-group">
+          <a href="#smart-blocks" class="btn-editorial-primary">Explorer les Recettes ↓</a>
+          <a href="#editors-pick" class="btn-editorial-outline">Choix du Chef</a>
         </div>
       </div>
-      <div class="smart-hero-card">
-        <a href="../posts/post-kimbap-master.html">
-          <div class="smart-hero-img-box"><img src="../images/food-kimbap-1.png" alt="Kimbap Maison" class="smart-hero-img"></div>
-          <div class="smart-hero-body">
-            <span class="smart-hero-tag">🔥 Recommandé</span>
-            <h2 class="smart-hero-title">Le Secret du Kimbap Parfait : Assaisonnement du Riz & Roulage</h2>
-            <p style="font-size: 0.88rem; color: #cbd5e1; line-height: 1.5;">Proportions idéales d'huile de sésame et méthode infaillible sans déchirer l'algue.</p>
-          </div>
-        </a>
+
+      <div class="hero-image-wrapper">
+        <img src="../images/food-kimbap-1.png" alt="Kimbap et Bento coréen" width="600" height="380" fetchpriority="high">
+        <div class="hero-image-caption">
+          🍙 Kimbap maison roulé avec passion & plats familiaux réconfortants
+        </div>
       </div>
     </div>
   </section>
 
-  <div class="main-layout">
-    <main>
-      <section class="smart-block-section" id="block-kimbap">
-        <div class="smart-block-header">
-          <h2 class="smart-block-title">🍙 L'Atelier du Kimbap (Kimbap Lab)</h2>
-          <span class="smart-block-badge">Populaire</span>
+  <!-- 3. NAVER INFLUENCER / FEATURED -->
+  <div class="naver-trust-strip">
+    <div class="naver-trust-box">
+      <div class="naver-trust-left">
+        <div class="naver-emblem-cluster">
+          <img src="../images/badge-monthly-blog.png" alt="Blog du Mois 2026" width="120" height="32" loading="lazy" decoding="async">
+          <img src="../images/badge-naver-mate.png" alt="Créatrice NAVER Mate" width="120" height="32" loading="lazy" decoding="async">
         </div>
-        <div class="smart-grid-2">
-          <article class="smart-card">
-            <a href="../posts/post-kimbap-master.html">
-              <div class="smart-card-img-wrap"><img src="../images/food-kimbap-1.png" alt="Kimbap Traditionnel" class="smart-card-img"><span class="smart-card-cat">Classique</span></div>
-              <div class="smart-card-body">
-                <div class="smart-card-meta">📅 Août 2026 • 5 min de lecture</div>
-                <h3 class="smart-card-title">Kimbap Traditionnel : La Technique Anti-Éclatement</h3>
-                <p class="smart-card-desc">Maîtrisez la cuisson du riz et la préparation des légumes sans excès d'eau.</p>
-                <div class="smart-card-action">Voir la recette →</div>
-              </div>
-            </a>
-          </article>
-          <article class="smart-card">
-            <a href="../posts/post-mukeunji-tuna-kimbap.html">
-              <div class="smart-card-img-wrap"><img src="../images/food-kimbap-2.png" alt="Kimbap Thon et Kimchi" class="smart-card-img"><span class="smart-card-cat">Gourmand</span></div>
-              <div class="smart-card-body">
-                <div class="smart-card-meta">📅 Août 2026 • 5 min de lecture</div>
-                <h3 class="smart-card-title">Kimbap au Kimchi Âgé (Mukeunji) et Thon Mayo</h3>
-                <p class="smart-card-desc">L'alliance parfaite entre l'acidité croquante du vieux kimchi lavé et le crémeux du thon.</p>
-                <div class="smart-card-action">Voir la recette →</div>
-              </div>
-            </a>
-          </article>
-        </div>
-      </section>
-    </main>
-
-    <aside class="sidebar">
-      <div class="widget">
-        <div class="author-profile-smart">
-          <div class="author-badges-wrap">
-            <img src="../images/badge-monthly-blog.png" alt="Blog 2026">
-            <img src="../images/badge-naver-mate.png" alt="Naver Mate">
-          </div>
-          <h3 class="author-name">Créateur Culinaire Officiel</h3>
-          <span class="author-verified-tag">✓ Certifié Naver Top Creator</span>
-          <p class="author-bio">Partage de recettes familiales coréennes authentiques, saines et faciles à réussir à la maison.</p>
+        <div class="naver-trust-text">
+          <h4>NAVER Influencer</h4>
+          <p>Blog du Mois 2026 · Créatrice Officielle NAVER Mate (Recettes)</p>
         </div>
       </div>
-    </aside>
+      <a href="https://blog.naver.com/gayagum12" target="_blank" rel="noopener noreferrer" class="naver-blog-link">
+        Blog Officiel ↗
+      </a>
+    </div>
   </div>
 
+  <!-- 4. SMART BLOCK (3x2 Grid) -->
+  <section class="section-container" id="smart-blocks">
+    <div class="section-head">
+      <h2 class="section-title">Catégories Clés</h2>
+      <span class="section-en-sub">6 Core Categories</span>
+    </div>
+
+    <div class="smart-block-grid-3x2">
+      <!-- 1. Kimbap -->
+      <article class="smart-category-card" id="cat-kimbap">
+        <a href="../posts/post-kimbap-master.html">
+          <div class="smart-cat-img-box">
+            <img src="../images/food-kimbap-1.png" alt="Kimbap" class="smart-cat-img" width="400" height="190" loading="lazy" decoding="async">
+            <span class="smart-cat-pill">01</span>
+          </div>
+          <div class="smart-cat-info">
+            <div class="smart-cat-title-wrap">
+              <h3 class="smart-cat-title">Kimbap</h3>
+              <span class="smart-cat-en">KIMBAP</span>
+            </div>
+            <p class="smart-cat-desc">Assaisonnement du riz et technique de roulage sans déchirure.</p>
+            <span class="smart-cat-link">Voir la recette →</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- 2. Bento -->
+      <article class="smart-category-card" id="cat-lunchbox">
+        <a href="../posts/post-weekly-lunchbox.html">
+          <div class="smart-cat-img-box">
+            <img src="../images/food-kimbap-2.png" alt="Bento" class="smart-cat-img" width="400" height="190" loading="lazy" decoding="async">
+            <span class="smart-cat-pill">02</span>
+          </div>
+          <div class="smart-cat-info">
+            <div class="smart-cat-title-wrap">
+              <h3 class="smart-cat-title">Bento</h3>
+              <span class="smart-cat-en">LUNCHBOX</span>
+            </div>
+            <p class="smart-cat-desc">Préparation la veille pour un panier-repas express le matin.</p>
+            <span class="smart-cat-link">Voir les bentos →</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- 3. Costco -->
+      <article class="smart-category-card" id="cat-costco">
+        <a href="../posts/post-costco-beef-guide.html">
+          <div class="smart-cat-img-box">
+            <img src="../images/food-costco-1.png" alt="Costco" class="smart-cat-img" width="400" height="190" loading="lazy" decoding="async">
+            <span class="smart-cat-pill">03</span>
+          </div>
+          <div class="smart-cat-info">
+            <div class="smart-cat-title-wrap">
+              <h3 class="smart-cat-title">Costco Corée</h3>
+              <span class="smart-cat-en">COSTCO KOREA</span>
+            </div>
+            <p class="smart-cat-desc">Portionnement et conservation futée du bœuf et du saumon.</p>
+            <span class="smart-cat-link">Astuces courses →</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- 4. Maison -->
+      <article class="smart-category-card" id="cat-homecook">
+        <a href="../posts/post-dried-pollack-egg-porridge.html">
+          <div class="smart-cat-img-box">
+            <img src="../images/food-kfood-3.png" alt="Cuisine Maison" class="smart-cat-img" width="400" height="190" loading="lazy" decoding="async">
+            <span class="smart-cat-pill">04</span>
+          </div>
+          <div class="smart-cat-info">
+            <div class="smart-cat-title-wrap">
+              <h3 class="smart-cat-title">Cuisine Maison</h3>
+              <span class="smart-cat-en">HOME COOKING</span>
+            </div>
+            <p class="smart-cat-desc">Plats coréens chaleureux et digestes au quotidien.</p>
+            <span class="smart-cat-link">Recettes maison →</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- 5. Banchan -->
+      <article class="smart-category-card" id="cat-banchan">
+        <a href="../posts/post-gochujang-jinmichae.html">
+          <div class="smart-cat-img-box">
+            <img src="../images/food-kfood-2.png" alt="Banchan" class="smart-cat-img" width="400" height="190" loading="lazy" decoding="async">
+            <span class="smart-cat-pill">05</span>
+          </div>
+          <div class="smart-cat-info">
+            <div class="smart-cat-title-wrap">
+              <h3 class="smart-cat-title">Banchan</h3>
+              <span class="smart-cat-en">BANCHAN</span>
+            </div>
+            <p class="smart-cat-desc">Accompagnements gourmands prêts en 10 minutes à garder au frais.</p>
+            <span class="smart-cat-link">Voir les banchan →</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- 6. Soupes -->
+      <article class="smart-category-card" id="cat-soup">
+        <a href="../posts/post-clam-soybean-soup.html">
+          <div class="smart-cat-img-box">
+            <img src="../images/food-kfood-1.png" alt="Soupes et Ragoûts" class="smart-cat-img" width="400" height="190" loading="lazy" decoding="async">
+            <span class="smart-cat-pill">06</span>
+          </div>
+          <div class="smart-cat-info">
+            <div class="smart-cat-title-wrap">
+              <h3 class="smart-cat-title">Soupes · Ragoûts</h3>
+              <span class="smart-cat-en">SOUP & STEW</span>
+            </div>
+            <p class="smart-cat-desc">Bouillons riches et mijotés coréens traditionnels sans MSG.</p>
+            <span class="smart-cat-link">Voir les soupes →</span>
+          </div>
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <!-- 5. EDITOR'S PICK -->
+  <section class="section-container" id="editors-pick">
+    <div class="section-head">
+      <h2 class="section-title">Sélection du Chef</h2>
+      <span class="section-en-sub">Editor's Pick</span>
+    </div>
+
+    <div class="editors-pick-layout">
+      <!-- Main Lead (Kimbap) -->
+      <article class="featured-lead-card">
+        <a href="../posts/post-kimbap-master.html">
+          <div class="featured-lead-img-box">
+            <img src="../images/food-kimbap-1.png" alt="Kimbap classique" width="600" height="280" loading="lazy" decoding="async">
+          </div>
+          <div class="featured-lead-body">
+            <span class="featured-lead-tag">FEATURED STORY</span>
+            <h3 class="featured-lead-title">Le Secret du Kimbap Réussi : Assaisonnement du Riz et Roulage Parfait</h3>
+            <p class="featured-lead-desc">
+              Le dosage idéal d'huile de sésame, la cuisson sans eau des légumes et la méthode pour couper sans casser.
+            </p>
+          </div>
+        </a>
+      </article>
+
+      <!-- Sub Picks List -->
+      <div class="sub-picks-list">
+        <article class="sub-pick-item">
+          <div class="sub-pick-thumb">
+            <img src="../images/food-kimbap-2.png" alt="Bento" width="110" height="85" loading="lazy" decoding="async">
+          </div>
+          <div class="sub-pick-info">
+            <h4><a href="../posts/post-weekly-lunchbox.html">Bento Coréen Prêt la Veille pour le Déjeuner de Bureau</a></h4>
+            <p>5 idées d'accompagnements savoureux sans sauce qui coule</p>
+          </div>
+        </article>
+
+        <article class="sub-pick-item">
+          <div class="sub-pick-thumb">
+            <img src="../images/food-costco-1.png" alt="Jarret de bœuf" width="110" height="85" loading="lazy" decoding="async">
+          </div>
+          <div class="sub-pick-info">
+            <h4><a href="../posts/post-costco-beef-guide.html">Jarret de Bœuf Mijoté & Bouillon Clair au Radis</a></h4>
+            <p>Texture fondante et gélatineuse après 1h20 de mijotage</p>
+          </div>
+        </article>
+
+        <article class="sub-pick-item">
+          <div class="sub-pick-thumb">
+            <img src="../images/food-kfood-2.png" alt="Calamars piquants" width="110" height="85" loading="lazy" decoding="async">
+          </div>
+          <div class="sub-pick-info">
+            <h4><a href="../posts/post-gochujang-jinmichae.html">Calamars Séchés au Gochujang : L'Astuce Vinaigre Doux</a></h4>
+            <p>Reste tendre et moelleux au réfrigérateur sans mayonnaise</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. LATEST STORIES -->
+  <section class="section-container">
+    <div class="section-head">
+      <h2 class="section-title">Dernières Recettes</h2>
+      <span class="section-en-sub">Latest Stories</span>
+    </div>
+
+    <div class="recipe-cards-grid-4">
+      <article class="recipe-card-clean">
+        <a href="../posts/post-weekly-lunchbox.html">
+          <div class="recipe-card-img-box"><img src="../images/food-kimbap-2.png" alt="Bento" width="300" height="160" loading="lazy" decoding="async"></div>
+          <div class="recipe-card-body">
+            <span class="recipe-card-tag">Bento</span>
+            <h3 class="recipe-card-title">5 Plats pour Bento Coréen de la Semaine</h3>
+            <p class="recipe-card-desc">Gagnez du temps le matin avec ces idées simples.</p>
+            <div class="recipe-card-footer">Découvrir →</div>
+          </div>
+        </a>
+      </article>
+
+      <article class="recipe-card-clean">
+        <a href="../posts/post-mukeunji-tuna-kimbap.html">
+          <div class="recipe-card-img-box"><img src="../images/food-kimbap-1.png" alt="Kimbap thon kimchi" width="300" height="160" loading="lazy" decoding="async"></div>
+          <div class="recipe-card-body">
+            <span class="recipe-card-tag">Kimbap</span>
+            <h3 class="recipe-card-title">Kimbap au Thon & Kimchi Âgé : Fraîcheur et Gourmandise</h3>
+            <p class="recipe-card-desc">Le croquant du kimchi rincé et l'onctuosité du thon.</p>
+            <div class="recipe-card-footer">Découvrir →</div>
+          </div>
+        </a>
+      </article>
+
+      <article class="recipe-card-clean">
+        <a href="../posts/post-soy-fishcake.html">
+          <div class="recipe-card-img-box"><img src="../images/food-kfood-3.png" alt="Pâté de poisson sauté" width="300" height="160" loading="lazy" decoding="async"></div>
+          <div class="recipe-card-body">
+            <span class="recipe-card-tag">Banchan</span>
+            <h3 class="recipe-card-title">Pâté de Poisson Sauté à la Sauce Soja et Légumes</h3>
+            <p class="recipe-card-desc">Un classique populaire fondant et parfumé.</p>
+            <div class="recipe-card-footer">Découvrir →</div>
+          </div>
+        </a>
+      </article>
+
+      <article class="recipe-card-clean">
+        <a href="../posts/post-salted-eggplant-stirfry.html">
+          <div class="recipe-card-img-box"><img src="../images/food-kfood-2.png" alt="Aubergines sautées" width="300" height="160" loading="lazy" decoding="async"></div>
+          <div class="recipe-card-body">
+            <span class="recipe-card-tag">Banchan</span>
+            <h3 class="recipe-card-title">Aubergines Sautées Fermes et Croquantes</h3>
+            <p class="recipe-card-desc">Dégorgées au sel pour une texture savoureuse.</p>
+            <div class="recipe-card-footer">Découvrir →</div>
+          </div>
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <!-- 7. AD AREA 1 -->
+  <div class="ad-container-slot">
+    <div class="ad-box-wrapper">
+      <span class="ad-label">Sponsored Advertisement</span>
+      <div style="font-size: 0.82rem; color: #8E8E8E;">Emplacement Publicitaire Google AdSense</div>
+    </div>
+  </div>
+
+  <!-- 8. GLOBAL LANGUAGE STRIP -->
+  <div class="global-lang-bar">
+    <div class="global-lang-title">
+      <span>🌐</span> GLOBAL LANGUAGE EDITIONS
+    </div>
+    <ul class="global-lang-list">
+      <li><a href="../index.html">KR 한국어</a></li>
+      <li><a href="../en/index.html">EN English</a></li>
+      <li><a href="../zh/index.html">ZH 中文</a></li>
+      <li><a href="../ja/index.html">JA 日本語</a></li>
+      <li><a href="index.html" class="active">FR Français</a></li>
+      <li><a href="../de/index.html">DE Deutsch</a></li>
+      <li><a href="../pt/index.html">PT Português</a></li>
+    </ul>
+  </div>
+
+  <!-- 9. FOOTER -->
   <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h3>
+          <span class="brand-seal-svg" style="width:22px; height:22px; vertical-align:middle; margin-right:4px; display:inline-flex;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 11c0 4.418 3.582 8 8 8s8-3.582 8-8H4z" fill="currentColor" fill-opacity="0.2"/>
+              <path d="M4 11h16" />
+              <path d="M19 4L7 10" />
+            </svg>
+          </span>
+          Afternoon Kitchen
+        </h3>
+        <p>Créatrice culinaire certifiée NAVER, dédiée à la cuisine familiale coréenne authentique, kimbap, bento et astuces culinaires.</p>
+      </div>
+      <div class="footer-nav">
+        <h4>Catégories</h4>
+        <ul>
+          <li><a href="#cat-kimbap">Kimbap</a></li>
+          <li><a href="#cat-lunchbox">Bento</a></li>
+          <li><a href="#cat-costco">Costco Corée</a></li>
+          <li><a href="#cat-homecook">Cuisine Maison</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav">
+        <h4>Politiques</h4>
+        <ul>
+          <li><a href="../about.html">À Propos (About)</a></li>
+          <li><a href="../privacy-policy.html">Confidentialité</a></li>
+          <li><a href="../terms.html">Conditions d'Utilisation</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 K-Food Insight (Français). Tous droits réservés.</p>
+      <p>&copy; 2026 Afternoon Kitchen. Tous droits réservés. Photographies et recettes originales protégées.</p>
     </div>
   </footer>
+
   <script src="../js/main.js"></script>
 </body>
 </html>

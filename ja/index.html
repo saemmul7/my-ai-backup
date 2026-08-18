@@ -3,41 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>K-Food Insight | 韓国公式インフルエンサーの本格韓国料理・キンパ・おうちごはん</title>
-  <meta name="description" content="NAVER公式2026今月のブログ＆ネイバーメイト選定！失敗しない絶品キンパ（韓国海苔巻き）、コストコ食材活用術、本格韓国家庭料理レシピ。">
-  
-  <link rel="alternate" hreflang="ko" href="https://yourkfooddomain.com/" />
-  <link rel="alternate" hreflang="en" href="https://yourkfooddomain.com/en/" />
-  <link rel="alternate" hreflang="zh" href="https://yourkfooddomain.com/zh/" />
-  <link rel="alternate" hreflang="ja" href="https://yourkfooddomain.com/ja/" />
-  <link rel="alternate" hreflang="fr" href="https://yourkfooddomain.com/fr/" />
-  <link rel="alternate" hreflang="de" href="https://yourkfooddomain.com/de/" />
-  <link rel="alternate" hreflang="pt" href="https://yourkfooddomain.com/pt/" />
-  <link rel="alternate" hreflang="x-default" href="https://yourkfooddomain.com/" />
+  <title>午後のキッチン | 今日も美味しく、韓国家庭料理レシピ</title>
+  <meta name="description" content="NAVER公式2026今月のブログ＆ネイバーメイト選定！失敗しない絶品キンパ（韓国海苔巻き）、お弁当、コストコ食材活用術、本格韓国家庭料理。">
 
-  <link rel="stylesheet" href="../css/style.css">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="午後のキッチン | 今日も美味しく、韓国家庭料理レシピ">
+  <meta property="og:description" content="キンパ · お弁当 · コストコ食材 · 毎日の家庭料理。NAVER公式料理クリエイター。">
+  
+  <link rel="stylesheet" href="../css/style.css?v=4.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <div id="reading-progress"></div>
+
+  <!-- 1. HEADER -->
   <header class="site-header">
     <div class="nav-container">
-      <a href="index.html" class="brand-logo">🥢 K-Food <span>Insight</span><span class="brand-badge">日本語版</span></a>
+      <a href="index.html" class="brand-logo" aria-label="午後のキッチン ホーム">
+        <span class="brand-seal-svg" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 11c0 4.418 3.582 8 8 8s8-3.582 8-8H4z" fill="currentColor" fill-opacity="0.2"/>
+            <path d="M4 11h16" />
+            <path d="M19 4L7 10" />
+          </svg>
+        </span>
+        午後のキッチン
+        <span>Korean Everyday Food</span>
+      </a>
+
       <div class="nav-right-cluster">
-        <nav>
+        <nav aria-label="メインメニュー">
           <ul class="nav-links" id="navLinks">
             <li><a href="index.html" class="active">ホーム</a></li>
-            <li><a href="#block-kimbap">キンパ</a></li>
-            <li><a href="#block-costco">コストコ活用</a></li>
-            <li><a href="#block-banchan">パンチャン(おかず)</a></li>
+            <li><a href="#cat-kimbap">キンパ</a></li>
+            <li><a href="#cat-lunchbox">お弁当</a></li>
+            <li><a href="#cat-costco">コストコ</a></li>
+            <li><a href="#cat-homecook">おうちご飯</a></li>
+            <li><a href="#cat-banchan">おかず</a></li>
+            <li><a href="#cat-soup">汁物·鍋</a></li>
             <li><a href="../about.html">紹介</a></li>
             <li><a href="../contact.html">お問い合わせ</a></li>
           </ul>
         </nav>
 
+        <!-- Global Language Selector -->
         <div class="lang-selector">
-          <button class="lang-btn" id="langBtn">🌐 日本語 (JA) ▾</button>
+          <button class="lang-btn" id="langBtn" aria-label="言語選択" aria-expanded="false" aria-controls="langDropdown">
+            🌐 JA ▾
+          </button>
           <ul class="lang-dropdown" id="langDropdown">
-            <li><a href="../index.html">🇰🇷 한국어 (KO)</a></li>
+            <li><a href="../index.html">🇰🇷 한국어 (KR)</a></li>
             <li><a href="../en/index.html">🇺🇸 English (EN)</a></li>
             <li><a href="../zh/index.html">🇨🇳 中文 (ZH)</a></li>
             <li><a href="index.html" class="active">🇯🇵 日本語 (JA)</a></li>
@@ -46,94 +65,353 @@
             <li><a href="../pt/index.html">🇵🇹 Português (PT)</a></li>
           </ul>
         </div>
-        <button class="mobile-toggle" id="mobileToggle">☰</button>
+
+        <button class="mobile-toggle" id="mobileToggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="navLinks">☰</button>
       </div>
     </div>
   </header>
 
-  <section class="hero-smart">
-    <div class="hero-smart-container">
+  <!-- 2. HERO -->
+  <section class="hero-editorial">
+    <div class="hero-editorial-card">
       <div>
-        <div class="badge-banner-smart">
-          <img src="../images/badge-monthly-blog.png" alt="2026 今月のブログ">
-          <img src="../images/badge-naver-mate.png" alt="公式クリエイター">
-          <span>🏆 NAVER公式認定インフルエンサー</span>
-        </div>
-        <h1 class="hero-title-smart">本場韓国のおうちごはん<br><span>スマートレシピキュレーション</span></h1>
-        <p class="hero-desc-smart">数万人の読者が認めた本格韓国家庭料理レシピ！破れないキンパの黄金比率から、ご飯が進む絶品おかずまで。</p>
-        <div class="smart-chips">
-          <a href="#block-kimbap" class="smart-chip">🍙 キンパ黄金レシピ</a>
-          <a href="#block-costco" class="smart-chip">🛒 コストコ活用術</a>
-          <a href="#block-banchan" class="smart-chip">🥘 10分簡単おかず</a>
+        <span class="hero-tagline">✦ DAILY KITCHEN STORIES</span>
+        <h1 class="hero-main-title">今日も美味しく、<br>韓国家庭料理レシピ</h1>
+        <p class="hero-sub-title">キンパ · お弁当 · コストコ食材 · 毎日のおうちご飯</p>
+        <p class="hero-en-sub">Korean Everyday Food & Lifestyle Magazine</p>
+        <div class="hero-btn-group">
+          <a href="#smart-blocks" class="btn-editorial-primary">カテゴリーを見る ↓</a>
+          <a href="#editors-pick" class="btn-editorial-outline">今月のおすすめ</a>
         </div>
       </div>
-      <div class="smart-hero-card">
-        <a href="../posts/post-kimbap-master.html">
-          <div class="smart-hero-img-box"><img src="../images/food-kimbap-1.png" alt="韓国海苔巻きキンパ" class="smart-hero-img"></div>
-          <div class="smart-hero-body">
-            <span class="smart-hero-tag">🔥 人気No.1 レシピ</span>
-            <h2 class="smart-hero-title">破れない！崩れない！プロ直伝の本格キンパ黄金比率</h2>
-            <p style="font-size: 0.88rem; color: #cbd5e1; line-height: 1.5;">ごま油と塩の配合、水気を出さない具材の下処理と巻き方のコツ。</p>
-          </div>
-        </a>
+
+      <div class="hero-image-wrapper">
+        <img src="../images/food-kimbap-1.png" alt="家庭風キンパとお弁当" width="600" height="380" fetchpriority="high">
+        <div class="hero-image-caption">
+          🍙 心を込めて巻いた手作りキンパと温かい韓国の食卓
+        </div>
       </div>
     </div>
   </section>
 
-  <div class="main-layout">
-    <main>
-      <section class="smart-block-section" id="block-kimbap">
-        <div class="smart-block-header">
-          <h2 class="smart-block-title">🍙 キンパ研究所 (Kimbap Master)</h2>
-          <span class="smart-block-badge">大人気</span>
+  <!-- 3. NAVER INFLUENCER / FEATURED -->
+  <div class="naver-trust-strip">
+    <div class="naver-trust-box">
+      <div class="naver-trust-left">
+        <div class="naver-emblem-cluster">
+          <img src="../images/badge-monthly-blog.png" alt="2026今月のブログ" width="120" height="32" loading="lazy" decoding="async">
+          <img src="../images/badge-naver-mate.png" alt="NAVER Mate公式クリエイター" width="120" height="32" loading="lazy" decoding="async">
         </div>
-        <div class="smart-grid-2">
-          <article class="smart-card">
-            <a href="../posts/post-kimbap-master.html">
-              <div class="smart-card-img-wrap"><img src="../images/food-kimbap-1.png" alt="基本のキンパ" class="smart-card-img"><span class="smart-card-cat">王道定番</span></div>
-              <div class="smart-card-body">
-                <div class="smart-card-meta">📅 2026.08 • 5分で読める</div>
-                <h3 class="smart-card-title">基本の家庭キンパ：水気ゼロの具材とご飯の黄金比</h3>
-                <p class="smart-card-desc">切るときに崩れない、固く巻く5つの重要ポイントを徹底解説。</p>
-                <div class="smart-card-action">レシピを見る →</div>
-              </div>
-            </a>
-          </article>
-          <article class="smart-card">
-            <a href="../posts/post-mukeunji-tuna-kimbap.html">
-              <div class="smart-card-img-wrap"><img src="../images/food-kimbap-2.png" alt="熟成キムチツナキンパ" class="smart-card-img"><span class="smart-card-cat">絶品アレンジ</span></div>
-              <div class="smart-card-body">
-                <div class="smart-card-meta">📅 2026.08 • 5分で読める</div>
-                <h3 class="smart-card-title">熟成キムチ(ムグンジ)とツナマヨのさっぱりキンパ</h3>
-                <p class="smart-card-desc">水洗いした古漬けキムチの爽やかな酸味とツナマヨの黄金バランス。</p>
-                <div class="smart-card-action">レシピを見る →</div>
-              </div>
-            </a>
-          </article>
-        </div>
-      </section>
-    </main>
-
-    <aside class="sidebar">
-      <div class="widget">
-        <div class="author-profile-smart">
-          <div class="author-badges-wrap">
-            <img src="../images/badge-monthly-blog.png" alt="2026 今月のブログ">
-            <img src="../images/badge-naver-mate.png" alt="公式クリエイター">
-          </div>
-          <h3 class="author-name">公式 K-Food クリエイター</h3>
-          <span class="author-verified-tag">✓ NAVER公式認定</span>
-          <p class="author-bio">本場韓国の家庭で毎日食べられている、本当に美味しくて体に優しいレシピをお届けします。</p>
+        <div class="naver-trust-text">
+          <h4>NAVER Influencer</h4>
+          <p>2026年 今月のブログ · NAVER Mate 公式レシピクリエイター選定</p>
         </div>
       </div>
-    </aside>
+      <a href="https://blog.naver.com/gayagum12" target="_blank" rel="noopener noreferrer" class="naver-blog-link">
+        公式ブログを見る ↗
+      </a>
+    </div>
   </div>
 
+  <!-- 4. SMART BLOCK (3x2 Grid) -->
+  <section class="section-container" id="smart-blocks">
+    <div class="section-head">
+      <h2 class="section-title">主要カテゴリー</h2>
+      <span class="section-en-sub">6 Core Categories</span>
+    </div>
+
+    <div class="smart-block-grid-3x2">
+      <!-- 1. キンパ -->
+      <article class="smart-category-card" id="cat-kimbap">
+        <a href="../posts/post-kimbap-master.html">
+          <div class="smart-cat-img-box">
+            <img src="../images/food-kimbap-1.png" alt="キンパ" class="smart-cat-img" width="400" height="190" loading="lazy" decoding="async">
+            <span class="smart-cat-pill">01</span>
+          </div>
+          <div class="smart-cat-info">
+            <div class="smart-cat-title-wrap">
+              <h3 class="smart-cat-title">キンパ</h3>
+              <span class="smart-cat-en">KIMBAP</span>
+            </div>
+            <p class="smart-cat-desc">破裂しないご飯の味付けとしっかり巻く家庭のコツ。</p>
+            <span class="smart-cat-link">レシピを見る →</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- 2. お弁当 -->
+      <article class="smart-category-card" id="cat-lunchbox">
+        <a href="../posts/post-weekly-lunchbox.html">
+          <div class="smart-cat-img-box">
+            <img src="../images/food-kimbap-2.png" alt="お弁当" class="smart-cat-img" width="400" height="190" loading="lazy" decoding="async">
+            <span class="smart-cat-pill">02</span>
+          </div>
+          <div class="smart-cat-info">
+            <div class="smart-cat-title-wrap">
+              <h3 class="smart-cat-title">お弁当</h3>
+              <span class="smart-cat-en">LUNCHBOX</span>
+            </div>
+            <p class="smart-cat-desc">前夜の下ごしらえで朝パパッと詰めるお弁当。</p>
+            <span class="smart-cat-link">お弁当を見る →</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- 3. コストコ食材 -->
+      <article class="smart-category-card" id="cat-costco">
+        <a href="../posts/post-costco-beef-guide.html">
+          <div class="smart-cat-img-box">
+            <img src="../images/food-costco-1.png" alt="コストコ食材" class="smart-cat-img" width="400" height="190" loading="lazy" decoding="async">
+            <span class="smart-cat-pill">03</span>
+          </div>
+          <div class="smart-cat-info">
+            <div class="smart-cat-title-wrap">
+              <h3 class="smart-cat-title">コストコ食材</h3>
+              <span class="smart-cat-en">COSTCO KOREA</span>
+            </div>
+            <p class="smart-cat-desc">大容量牛肉やサーモンの上手な小分け＆韓国風活用法。</p>
+            <span class="smart-cat-link">活用術を見る →</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- 4. おうちご飯 -->
+      <article class="smart-category-card" id="cat-homecook">
+        <a href="../posts/post-dried-pollack-egg-porridge.html">
+          <div class="smart-cat-img-box">
+            <img src="../images/food-kfood-3.png" alt="おうちご飯" class="smart-cat-img" width="400" height="190" loading="lazy" decoding="async">
+            <span class="smart-cat-pill">04</span>
+          </div>
+          <div class="smart-cat-info">
+            <div class="smart-cat-title-wrap">
+              <h3 class="smart-cat-title">おうちご飯</h3>
+              <span class="smart-cat-en">HOME COOKING</span>
+            </div>
+            <p class="smart-cat-desc">毎日食べても飽きない体に優しい韓国家庭料理。</p>
+            <span class="smart-cat-link">家庭料理を見る →</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- 5. おかず -->
+      <article class="smart-category-card" id="cat-banchan">
+        <a href="../posts/post-gochujang-jinmichae.html">
+          <div class="smart-cat-img-box">
+            <img src="../images/food-kfood-2.png" alt="おかず" class="smart-cat-img" width="400" height="190" loading="lazy" decoding="async">
+            <span class="smart-cat-pill">05</span>
+          </div>
+          <div class="smart-cat-info">
+            <div class="smart-cat-title-wrap">
+              <h3 class="smart-cat-title">常備菜</h3>
+              <span class="smart-cat-en">BANCHAN</span>
+            </div>
+            <p class="smart-cat-desc">冷蔵庫にあると心強い10分完成のご飯のお供。</p>
+            <span class="smart-cat-link">おかずを見る →</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- 6. 汁物・鍋 -->
+      <article class="smart-category-card" id="cat-soup">
+        <a href="../posts/post-clam-soybean-soup.html">
+          <div class="smart-cat-img-box">
+            <img src="../images/food-kfood-1.png" alt="汁物と鍋" class="smart-cat-img" width="400" height="190" loading="lazy" decoding="async">
+            <span class="smart-cat-pill">06</span>
+          </div>
+          <div class="smart-cat-info">
+            <div class="smart-cat-title-wrap">
+              <h3 class="smart-cat-title">汁物 · 鍋</h3>
+              <span class="smart-cat-en">SOUP & STEW</span>
+            </div>
+            <p class="smart-cat-desc">天然出汁でじっくり煮出す深い旨味の韓国スープ。</p>
+            <span class="smart-cat-link">スープを見る →</span>
+          </div>
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <!-- 5. EDITOR'S PICK -->
+  <section class="section-container" id="editors-pick">
+    <div class="section-head">
+      <h2 class="section-title">エディターズ・ピック</h2>
+      <span class="section-en-sub">Editor's Pick</span>
+    </div>
+
+    <div class="editors-pick-layout">
+      <!-- Main Lead (Kimbap) -->
+      <article class="featured-lead-card">
+        <a href="../posts/post-kimbap-master.html">
+          <div class="featured-lead-img-box">
+            <img src="../images/food-kimbap-1.png" alt="絶品キンパ" width="600" height="280" loading="lazy" decoding="async">
+          </div>
+          <div class="featured-lead-body">
+            <span class="featured-lead-tag">FEATURED STORY</span>
+            <h3 class="featured-lead-title">失敗しない基本の家庭風キンパ：ご飯の下味としっかり巻くコツ</h3>
+            <p class="featured-lead-desc">
+              ごま油と塩の黄金比率で味付けしたご飯、水分を飛ばして炒めた具材で切っても崩れないキンパの作り方。
+            </p>
+          </div>
+        </a>
+      </article>
+
+      <!-- Sub Picks List -->
+      <div class="sub-picks-list">
+        <article class="sub-pick-item">
+          <div class="sub-pick-thumb">
+            <img src="../images/food-kimbap-2.png" alt="お弁当" width="110" height="85" loading="lazy" decoding="async">
+          </div>
+          <div class="sub-pick-info">
+            <h4><a href="../posts/post-weekly-lunchbox.html">前夜の下ごしらえで朝すぐ詰める夫のお弁当</a></h4>
+            <p>汁気のないおかずで揃える一週間の韓国風お弁当</p>
+          </div>
+        </article>
+
+        <article class="sub-pick-item">
+          <div class="sub-pick-thumb">
+            <img src="../images/food-costco-1.png" alt="牛スネ肉" width="110" height="85" loading="lazy" decoding="async">
+          </div>
+          <div class="sub-pick-info">
+            <h4><a href="../posts/post-costco-beef-guide.html">コストコ牛スネ肉の茹で方＆万能大根スープ</a></h4>
+            <p>じっくり煮込んで柔らかく仕上げるスネ肉と透明なスープ</p>
+          </div>
+        </article>
+
+        <article class="sub-pick-item">
+          <div class="sub-pick-thumb">
+            <img src="../images/food-kfood-2.png" alt="イカの甘辛炒め" width="110" height="85" loading="lazy" decoding="async">
+          </div>
+          <div class="sub-pick-info">
+            <h4><a href="../posts/post-gochujang-jinmichae.html">マヨネーズ不使用でも柔らかいコチュジャンさきいか炒め</a></h4>
+            <p>冷蔵庫でも固くならない定番のご飯のお供</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. LATEST STORIES -->
+  <section class="section-container">
+    <div class="section-head">
+      <h2 class="section-title">最新のおうちご飯</h2>
+      <span class="section-en-sub">Latest Stories</span>
+    </div>
+
+    <div class="recipe-cards-grid-4">
+      <article class="recipe-card-clean">
+        <a href="../posts/post-weekly-lunchbox.html">
+          <div class="recipe-card-img-box"><img src="../images/food-kimbap-2.png" alt="お弁当" width="300" height="160" loading="lazy" decoding="async"></div>
+          <div class="recipe-card-body">
+            <span class="recipe-card-tag">お弁当</span>
+            <h3 class="recipe-card-title">一週間の会社員向け韓国お弁当おかず5選</h3>
+            <p class="recipe-card-desc">朝の時間を短縮する栄養満点のお弁当。</p>
+            <div class="recipe-card-footer">詳しく見る →</div>
+          </div>
+        </a>
+      </article>
+
+      <article class="recipe-card-clean">
+        <a href="../posts/post-mukeunji-tuna-kimbap.html">
+          <div class="recipe-card-img-box"><img src="../images/food-kimbap-1.png" alt="熟成キムチツナキンパ" width="300" height="160" loading="lazy" decoding="async"></div>
+          <div class="recipe-card-body">
+            <span class="recipe-card-tag">キンパ</span>
+            <h3 class="recipe-card-title">熟成キムチとツナのキンパ：さっぱり香ばしい味</h3>
+            <p class="recipe-card-desc">水洗いした古漬けキムチとツナマヨの相性。</p>
+            <div class="recipe-card-footer">詳しく見る →</div>
+          </div>
+        </a>
+      </article>
+
+      <article class="recipe-card-clean">
+        <a href="../posts/post-soy-fishcake.html">
+          <div class="recipe-card-img-box"><img src="../images/food-kfood-3.png" alt="オムク炒め" width="300" height="160" loading="lazy" decoding="async"></div>
+          <div class="recipe-card-body">
+            <span class="recipe-card-tag">常備菜</span>
+            <h3 class="recipe-card-title">しっとり炒める醤油オムク（韓国さつま揚げ）</h3>
+            <p class="recipe-card-desc">野菜と一緒に甘辛く炒めた国民的おかず。</p>
+            <div class="recipe-card-footer">詳しく見る →</div>
+          </div>
+        </a>
+      </article>
+
+      <article class="recipe-card-clean">
+        <a href="../posts/post-salted-eggplant-stirfry.html">
+          <div class="recipe-card-img-box"><img src="../images/food-kfood-2.png" alt="ナスの塩漬け炒め" width="300" height="160" loading="lazy" decoding="async"></div>
+          <div class="recipe-card-body">
+            <span class="recipe-card-tag">常備菜</span>
+            <h3 class="recipe-card-title">水っぽくならず歯ごたえ抜群の塩漬けナス炒め</h3>
+            <p class="recipe-card-desc">塩もみして水分を絞ったもちもち食感。</p>
+            <div class="recipe-card-footer">詳しく見る →</div>
+          </div>
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <!-- 7. AD AREA 1 -->
+  <div class="ad-container-slot">
+    <div class="ad-box-wrapper">
+      <span class="ad-label">Sponsored Advertisement</span>
+      <div style="font-size: 0.82rem; color: #8E8E8E;">Google AdSense レスポンシブ広告枠</div>
+    </div>
+  </div>
+
+  <!-- 8. GLOBAL LANGUAGE STRIP -->
+  <div class="global-lang-bar">
+    <div class="global-lang-title">
+      <span>🌐</span> GLOBAL LANGUAGE EDITIONS
+    </div>
+    <ul class="global-lang-list">
+      <li><a href="../index.html">KR 한국어</a></li>
+      <li><a href="../en/index.html">EN English</a></li>
+      <li><a href="../zh/index.html">ZH 中文</a></li>
+      <li><a href="index.html" class="active">JA 日本語</a></li>
+      <li><a href="../fr/index.html">FR Français</a></li>
+      <li><a href="../de/index.html">DE Deutsch</a></li>
+      <li><a href="../pt/index.html">PT Português</a></li>
+    </ul>
+  </div>
+
+  <!-- 9. FOOTER -->
   <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h3>
+          <span class="brand-seal-svg" style="width:22px; height:22px; vertical-align:middle; margin-right:4px; display:inline-flex;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 11c0 4.418 3.582 8 8 8s8-3.582 8-8H4z" fill="currentColor" fill-opacity="0.2"/>
+              <path d="M4 11h16" />
+              <path d="M19 4L7 10" />
+            </svg>
+          </span>
+          午後のキッチン
+        </h3>
+        <p>NAVER公式インフルエンサーがお届けする、温かい韓国家庭料理、キンパ、お弁当、コストコ食材レシピ。</p>
+      </div>
+      <div class="footer-nav">
+        <h4>カテゴリー</h4>
+        <ul>
+          <li><a href="#cat-kimbap">キンパ</a></li>
+          <li><a href="#cat-lunchbox">お弁当</a></li>
+          <li><a href="#cat-costco">コストコ食材</a></li>
+          <li><a href="#cat-homecook">おうちご飯</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav">
+        <h4>サイト情報</h4>
+        <ul>
+          <li><a href="../about.html">サイト紹介 (About)</a></li>
+          <li><a href="../privacy-policy.html">プライバシーポリシー</a></li>
+          <li><a href="../terms.html">利用規約 (Terms)</a></li>
+          <li><a href="../contact.html">お問い合わせ (Contact)</a></li>
+        </ul>
+      </div>
+    </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 K-Food Insight. All rights reserved. 著作権法保護コンテンツ。</p>
+      <p>&copy; 2026 午後のキッチン (Afternoon Kitchen). All rights reserved. オリジナル撮影写真およびレシピ著作権保護。</p>
     </div>
   </footer>
+
   <script src="../js/main.js"></script>
 </body>
 </html>

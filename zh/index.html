@@ -1,43 +1,62 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>K-Food Insight | 韩国官方美食博主的正宗韩餐、紫菜包饭与开胃小菜指南</title>
-  <meta name="description" content="NAVER官方认证2026年度博主！手把手教您制作零失败家庭紫菜包饭(Kimbap)、Costco大包装食材韩式吃法与传统发酵美食。">
-  
-  <link rel="alternate" hreflang="ko" href="https://yourkfooddomain.com/" />
-  <link rel="alternate" hreflang="en" href="https://yourkfooddomain.com/en/" />
-  <link rel="alternate" hreflang="zh" href="https://yourkfooddomain.com/zh/" />
-  <link rel="alternate" hreflang="ja" href="https://yourkfooddomain.com/ja/" />
-  <link rel="alternate" hreflang="fr" href="https://yourkfooddomain.com/fr/" />
-  <link rel="alternate" hreflang="de" href="https://yourkfooddomain.com/de/" />
-  <link rel="alternate" hreflang="pt" href="https://yourkfooddomain.com/pt/" />
-  <link rel="alternate" hreflang="x-default" href="https://yourkfooddomain.com/" />
+  <title>午后厨房 | 每天美味，正宗韩国家常菜生活志</title>
+  <meta name="description" content="NAVER 2026年度官方美食创作者！零失败家庭紫菜包饭、便当餐盒、Costco食材韩式巧用、日常下饭菜与传统汤煲食谱。">
 
-  <link rel="stylesheet" href="../css/style.css">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="午后厨房 | 每天美味，正宗韩国家常菜生活志">
+  <meta property="og:description" content="紫菜包饭 · 便当餐盒 · Costco食材 · 每天家常菜。NAVER官方美食家专栏。">
+  
+  <link rel="stylesheet" href="../css/style.css?v=4.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <div id="reading-progress"></div>
+
+  <!-- 1. HEADER -->
   <header class="site-header">
     <div class="nav-container">
-      <a href="index.html" class="brand-logo">🥢 K-Food <span>Insight</span><span class="brand-badge">中文版</span></a>
+      <a href="index.html" class="brand-logo" aria-label="午后厨房 首页">
+        <span class="brand-seal-svg" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 11c0 4.418 3.582 8 8 8s8-3.582 8-8H4z" fill="currentColor" fill-opacity="0.2"/>
+            <path d="M4 11h16" />
+            <path d="M19 4L7 10" />
+          </svg>
+        </span>
+        午后厨房
+        <span>Korean Everyday Food</span>
+      </a>
+
       <div class="nav-right-cluster">
-        <nav>
+        <nav aria-label="主菜单">
           <ul class="nav-links" id="navLinks">
             <li><a href="index.html" class="active">首页</a></li>
-            <li><a href="#block-kimbap">紫菜包饭</a></li>
-            <li><a href="#block-costco">Costco韩餐</a></li>
-            <li><a href="#block-banchan">下饭小菜</a></li>
-            <li><a href="../about.html">关于我们</a></li>
+            <li><a href="#cat-kimbap">紫菜包饭</a></li>
+            <li><a href="#cat-lunchbox">便当</a></li>
+            <li><a href="#cat-costco">Costco</a></li>
+            <li><a href="#cat-homecook">家常菜</a></li>
+            <li><a href="#cat-banchan">小菜</a></li>
+            <li><a href="#cat-soup">汤煲</a></li>
+            <li><a href="../about.html">关于</a></li>
             <li><a href="../contact.html">联系</a></li>
           </ul>
         </nav>
 
+        <!-- Global Language Selector -->
         <div class="lang-selector">
-          <button class="lang-btn" id="langBtn">🌐 中文 (ZH) ▾</button>
+          <button class="lang-btn" id="langBtn" aria-label="选择语言" aria-expanded="false" aria-controls="langDropdown">
+            🌐 ZH ▾
+          </button>
           <ul class="lang-dropdown" id="langDropdown">
-            <li><a href="../index.html">🇰🇷 한국어 (KO)</a></li>
+            <li><a href="../index.html">🇰🇷 한국어 (KR)</a></li>
             <li><a href="../en/index.html">🇺🇸 English (EN)</a></li>
             <li><a href="index.html" class="active">🇨🇳 中文 (ZH)</a></li>
             <li><a href="../ja/index.html">🇯🇵 日本語 (JA)</a></li>
@@ -46,94 +65,353 @@
             <li><a href="../pt/index.html">🇵🇹 Português (PT)</a></li>
           </ul>
         </div>
-        <button class="mobile-toggle" id="mobileToggle">☰</button>
+
+        <button class="mobile-toggle" id="mobileToggle" aria-label="打开菜单" aria-expanded="false" aria-controls="navLinks">☰</button>
       </div>
     </div>
   </header>
 
-  <section class="hero-smart">
-    <div class="hero-smart-container">
+  <!-- 2. HERO -->
+  <section class="hero-editorial">
+    <div class="hero-editorial-card">
       <div>
-        <div class="badge-banner-smart">
-          <img src="../images/badge-monthly-blog.png" alt="2026年度博客">
-          <img src="../images/badge-naver-mate.png" alt="官方创作者">
-          <span>🏆 NAVER 官方美食博主认证</span>
-        </div>
-        <h1 class="hero-title-smart">正宗韩国料理<br><span>智能精选食谱指南</span></h1>
-        <p class="hero-desc-smart">数万读者亲测好评的正统韩国家庭食谱！从不破皮的紫菜包饭黄金米饭比例，到开胃下饭菜的调味秘诀。</p>
-        <div class="smart-chips">
-          <a href="#block-kimbap" class="smart-chip">🍙 紫菜包饭秘籍</a>
-          <a href="#block-costco" class="smart-chip">🛒 Costco食材巧用</a>
-          <a href="#block-banchan" class="smart-chip">🥘 10分钟快手小菜</a>
+        <span class="hero-tagline">✦ DAILY KITCHEN STORIES</span>
+        <h1 class="hero-main-title">每天美味，<br>韩国家常菜生活志</h1>
+        <p class="hero-sub-title">紫菜包饭 · 便当 · Costco食材 · 每日家常菜</p>
+        <p class="hero-en-sub">Korean Everyday Food & Lifestyle Magazine</p>
+        <div class="hero-btn-group">
+          <a href="#smart-blocks" class="btn-editorial-primary">浏览核心分类 ↓</a>
+          <a href="#editors-pick" class="btn-editorial-outline">编辑推荐食谱</a>
         </div>
       </div>
-      <div class="smart-hero-card">
-        <a href="../posts/post-kimbap-master.html">
-          <div class="smart-hero-img-box"><img src="../images/food-kimbap-1.png" alt="韩式紫菜包饭" class="smart-hero-img"></div>
-          <div class="smart-hero-body">
-            <span class="smart-hero-tag">🔥 热门精选</span>
-            <h2 class="smart-hero-title">绝不破皮切口整齐的韩国紫菜包饭制作秘诀</h2>
-            <p style="font-size: 0.88rem; color: #cbd5e1; line-height: 1.5;">香油与细盐的黄金配比，蔬菜去水与紧实卷法全解析。</p>
-          </div>
-        </a>
+
+      <div class="hero-image-wrapper">
+        <img src="../images/food-kimbap-1.png" alt="家庭紫菜包饭与便当" width="600" height="380" fetchpriority="high">
+        <div class="hero-image-caption">
+          🍙 用心卷制的手作紫菜包饭与温馨韩国家庭餐桌
+        </div>
       </div>
     </div>
   </section>
 
-  <div class="main-layout">
-    <main>
-      <section class="smart-block-section" id="block-kimbap">
-        <div class="smart-block-header">
-          <h2 class="smart-block-title">🍙 紫菜包饭研究所 (Kimbap Lab)</h2>
-          <span class="smart-block-badge">经典必学</span>
+  <!-- 3. NAVER INFLUENCER / FEATURED -->
+  <div class="naver-trust-strip">
+    <div class="naver-trust-box">
+      <div class="naver-trust-left">
+        <div class="naver-emblem-cluster">
+          <img src="../images/badge-monthly-blog.png" alt="2026年度博主" width="120" height="32" loading="lazy" decoding="async">
+          <img src="../images/badge-naver-mate.png" alt="NAVER Mate官方食谱创作者" width="120" height="32" loading="lazy" decoding="async">
         </div>
-        <div class="smart-grid-2">
-          <article class="smart-card">
-            <a href="../posts/post-kimbap-master.html">
-              <div class="smart-card-img-wrap"><img src="../images/food-kimbap-1.png" alt="经典紫菜包饭" class="smart-card-img"><span class="smart-card-cat">传统正宗</span></div>
-              <div class="smart-card-body">
-                <div class="smart-card-meta">📅 2026.08 • 5分钟阅读</div>
-                <h3 class="smart-card-title">家庭紫菜包饭黄金比例米饭与卷法</h3>
-                <p class="smart-card-desc">米水控制、无水蔬菜处理与切时不散的5大核心技巧。</p>
-                <div class="smart-card-action">查看食谱 →</div>
-              </div>
-            </a>
-          </article>
-          <article class="smart-card">
-            <a href="../posts/post-mukeunji-tuna-kimbap.html">
-              <div class="smart-card-img-wrap"><img src="../images/food-kimbap-2.png" alt="老泡菜金枪鱼包饭" class="smart-card-img"><span class="smart-card-cat">特调风味</span></div>
-              <div class="smart-card-body">
-                <div class="smart-card-meta">📅 2026.08 • 5分钟阅读</div>
-                <h3 class="smart-card-title">老泡菜(Mukeunji)金枪鱼沙拉紫菜包饭</h3>
-                <p class="smart-card-desc">洗净老泡菜的爽脆与浓郁金枪鱼蛋黄酱的绝妙平衡。</p>
-                <div class="smart-card-action">查看食谱 →</div>
-              </div>
-            </a>
-          </article>
-        </div>
-      </section>
-    </main>
-
-    <aside class="sidebar">
-      <div class="widget">
-        <div class="author-profile-smart">
-          <div class="author-badges-wrap">
-            <img src="../images/badge-monthly-blog.png" alt="2026年度博客">
-            <img src="../images/badge-naver-mate.png" alt="官方创作者">
-          </div>
-          <h3 class="author-name">K-Food 官方认证博主</h3>
-          <span class="author-verified-tag">✓ NAVER 官方美食博主</span>
-          <p class="author-bio">致力于向全球美食爱好者分享100%实测成功、健康温暖的韩国家常菜做法。</p>
+        <div class="naver-trust-text">
+          <h4>NAVER Influencer</h4>
+          <p>2026年度博主 · NAVER Mate 官方认证食谱创作者 · 韩国门户美食频道多次推荐</p>
         </div>
       </div>
-    </aside>
+      <a href="https://blog.naver.com/gayagum12" target="_blank" rel="noopener noreferrer" class="naver-blog-link">
+        访问官方博客 ↗
+      </a>
+    </div>
   </div>
 
+  <!-- 4. SMART BLOCK (3x2 Grid) -->
+  <section class="section-container" id="smart-blocks">
+    <div class="section-head">
+      <h2 class="section-title">核心分类</h2>
+      <span class="section-en-sub">6 Core Categories</span>
+    </div>
+
+    <div class="smart-block-grid-3x2">
+      <!-- 1. 紫菜包饭 -->
+      <article class="smart-category-card" id="cat-kimbap">
+        <a href="../posts/post-kimbap-master.html">
+          <div class="smart-cat-img-box">
+            <img src="../images/food-kimbap-1.png" alt="紫菜包饭" class="smart-cat-img" width="400" height="190" loading="lazy" decoding="async">
+            <span class="smart-cat-pill">01</span>
+          </div>
+          <div class="smart-cat-info">
+            <div class="smart-cat-title-wrap">
+              <h3 class="smart-cat-title">紫菜包饭</h3>
+              <span class="smart-cat-en">KIMBAP</span>
+            </div>
+            <p class="smart-cat-desc">家庭制作不破皮的米饭调味与紧实卷法秘诀。</p>
+            <span class="smart-cat-link">查看食谱 →</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- 2. 便当 -->
+      <article class="smart-category-card" id="cat-lunchbox">
+        <a href="../posts/post-weekly-lunchbox.html">
+          <div class="smart-cat-img-box">
+            <img src="../images/food-kimbap-2.png" alt="便当" class="smart-cat-img" width="400" height="190" loading="lazy" decoding="async">
+            <span class="smart-cat-pill">02</span>
+          </div>
+          <div class="smart-cat-info">
+            <div class="smart-cat-title-wrap">
+              <h3 class="smart-cat-title">便当</h3>
+              <span class="smart-cat-en">LUNCHBOX</span>
+            </div>
+            <p class="smart-cat-desc">前一晚备料，清晨快速装盘的上班族便当。</p>
+            <span class="smart-cat-link">查看便当 →</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- 3. Costco食材 -->
+      <article class="smart-category-card" id="cat-costco">
+        <a href="../posts/post-costco-beef-guide.html">
+          <div class="smart-cat-img-box">
+            <img src="../images/food-costco-1.png" alt="Costco食材" class="smart-cat-img" width="400" height="190" loading="lazy" decoding="async">
+            <span class="smart-cat-pill">03</span>
+          </div>
+          <div class="smart-cat-info">
+            <div class="smart-cat-title-wrap">
+              <h3 class="smart-cat-title">Costco食材</h3>
+              <span class="smart-cat-en">COSTCO KOREA</span>
+            </div>
+            <p class="smart-cat-desc">大包装牛肉与三文鱼的韩式分装与保存技巧。</p>
+            <span class="smart-cat-link">采购心得 →</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- 4. 家常菜 -->
+      <article class="smart-category-card" id="cat-homecook">
+        <a href="../posts/post-dried-pollack-egg-porridge.html">
+          <div class="smart-cat-img-box">
+            <img src="../images/food-kfood-3.png" alt="家常菜" class="smart-cat-img" width="400" height="190" loading="lazy" decoding="async">
+            <span class="smart-cat-pill">04</span>
+          </div>
+          <div class="smart-cat-info">
+            <div class="smart-cat-title-wrap">
+              <h3 class="smart-cat-title">家常菜</h3>
+              <span class="smart-cat-en">HOME COOKING</span>
+            </div>
+            <p class="smart-cat-desc">天天吃也不腻的温暖舒适韩国家庭餐桌。</p>
+            <span class="smart-cat-link">家常菜谱 →</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- 5. 小菜 -->
+      <article class="smart-category-card" id="cat-banchan">
+        <a href="../posts/post-gochujang-jinmichae.html">
+          <div class="smart-cat-img-box">
+            <img src="../images/food-kfood-2.png" alt="小菜" class="smart-cat-img" width="400" height="190" loading="lazy" decoding="async">
+            <span class="smart-cat-pill">05</span>
+          </div>
+          <div class="smart-cat-info">
+            <div class="smart-cat-title-wrap">
+              <h3 class="smart-cat-title">小菜</h3>
+              <span class="smart-cat-en">BANCHAN</span>
+            </div>
+            <p class="smart-cat-desc">常备冰箱的10分钟下饭韩式小菜合集。</p>
+            <span class="smart-cat-link">精选小菜 →</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- 6. 汤煲 -->
+      <article class="smart-category-card" id="cat-soup">
+        <a href="../posts/post-clam-soybean-soup.html">
+          <div class="smart-cat-img-box">
+            <img src="../images/food-kfood-1.png" alt="汤煲" class="smart-cat-img" width="400" height="190" loading="lazy" decoding="async">
+            <span class="smart-cat-pill">06</span>
+          </div>
+          <div class="smart-cat-info">
+            <div class="smart-cat-title-wrap">
+              <h3 class="smart-cat-title">汤 · 煲</h3>
+              <span class="smart-cat-en">SOUP & STEW</span>
+            </div>
+            <p class="smart-cat-desc">天然高汤慢炖出的醇厚鲜美韩国汤品。</p>
+            <span class="smart-cat-link">汤煲合集 →</span>
+          </div>
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <!-- 5. EDITOR'S PICK -->
+  <section class="section-container" id="editors-pick">
+    <div class="section-head">
+      <h2 class="section-title">编辑精选</h2>
+      <span class="section-en-sub">Editor's Pick</span>
+    </div>
+
+    <div class="editors-pick-layout">
+      <!-- Main Lead (Kimbap) -->
+      <article class="featured-lead-card">
+        <a href="../posts/post-kimbap-master.html">
+          <div class="featured-lead-img-box">
+            <img src="../images/food-kimbap-1.png" alt="紫菜包饭" width="600" height="280" loading="lazy" decoding="async">
+          </div>
+          <div class="featured-lead-body">
+            <span class="featured-lead-tag">FEATURED STORY</span>
+            <h3 class="featured-lead-title">零失败家庭紫菜包饭：米饭底味调配与紧实卷法</h3>
+            <p class="featured-lead-desc">
+              香油与精盐的黄金米饭配比，控干水分的配菜炒制，切时不松散的家庭实操秘诀。
+            </p>
+          </div>
+        </a>
+      </article>
+
+      <!-- Sub Picks List -->
+      <div class="sub-picks-list">
+        <article class="sub-pick-item">
+          <div class="sub-pick-thumb">
+            <img src="../images/food-kimbap-2.png" alt="便当" width="110" height="85" loading="lazy" decoding="async">
+          </div>
+          <div class="sub-pick-info">
+            <h4><a href="../posts/post-weekly-lunchbox.html">前一晚备料，清晨快速装盘的上班族便当</a></h4>
+            <p>干爽不串味的一周营养便当搭配法则</p>
+          </div>
+        </article>
+
+        <article class="sub-pick-item">
+          <div class="sub-pick-thumb">
+            <img src="../images/food-costco-1.png" alt="牛腱肉" width="110" height="85" loading="lazy" decoding="async">
+          </div>
+          <div class="sub-pick-info">
+            <h4><a href="../posts/post-costco-beef-guide.html">Costco牛腱炖煮法与万能牛肉萝卜清汤</a></h4>
+            <p>慢火慢炖出的软糯胶质与清甜肉汤</p>
+          </div>
+        </article>
+
+        <article class="sub-pick-item">
+          <div class="sub-pick-thumb">
+            <img src="../images/food-kfood-2.png" alt="辣酱鱿鱼丝" width="110" height="85" loading="lazy" decoding="async">
+          </div>
+          <div class="sub-pick-info">
+            <h4><a href="../posts/post-gochujang-jinmichae.html">无需沙拉酱也能保持软嫩的韩式辣酱鱿鱼丝</a></h4>
+            <p>冷藏也不发硬的经典下饭小菜</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. LATEST STORIES -->
+  <section class="section-container">
+    <div class="section-head">
+      <h2 class="section-title">最新家常美味</h2>
+      <span class="section-en-sub">Latest Stories</span>
+    </div>
+
+    <div class="recipe-cards-grid-4">
+      <article class="recipe-card-clean">
+        <a href="../posts/post-weekly-lunchbox.html">
+          <div class="recipe-card-img-box"><img src="../images/food-kimbap-2.png" alt="便当" width="300" height="160" loading="lazy" decoding="async"></div>
+          <div class="recipe-card-body">
+            <span class="recipe-card-tag">便当</span>
+            <h3 class="recipe-card-title">一周上班族韩式便当配菜5款</h3>
+            <p class="recipe-card-desc">节省清晨时间的实惠便当方案。</p>
+            <div class="recipe-card-footer">查看详情 →</div>
+          </div>
+        </a>
+      </article>
+
+      <article class="recipe-card-clean">
+        <a href="../posts/post-mukeunji-tuna-kimbap.html">
+          <div class="recipe-card-img-box"><img src="../images/food-kimbap-1.png" alt="老泡菜金枪鱼包饭" width="300" height="160" loading="lazy" decoding="async"></div>
+          <div class="recipe-card-body">
+            <span class="recipe-card-tag">紫菜包饭</span>
+            <h3 class="recipe-card-title">老泡菜金枪鱼紫菜包饭：清爽与浓香</h3>
+            <p class="recipe-card-desc">洗净老泡菜的爽脆与金枪鱼的醇厚融合。</p>
+            <div class="recipe-card-footer">查看详情 →</div>
+          </div>
+        </a>
+      </article>
+
+      <article class="recipe-card-clean">
+        <a href="../posts/post-soy-fishcake.html">
+          <div class="recipe-card-img-box"><img src="../images/food-kfood-3.png" alt="酱炒鱼饼" width="300" height="160" loading="lazy" decoding="async"></div>
+          <div class="recipe-card-body">
+            <span class="recipe-card-tag">小菜</span>
+            <h3 class="recipe-card-title">鲜香软糯的酱油炒蔬菜鱼饼</h3>
+            <p class="recipe-card-desc">少油快炒的韩国家庭国民小菜。</p>
+            <div class="recipe-card-footer">查看详情 →</div>
+          </div>
+        </a>
+      </article>
+
+      <article class="recipe-card-clean">
+        <a href="../posts/post-salted-eggplant-stirfry.html">
+          <div class="recipe-card-img-box"><img src="../images/food-kfood-2.png" alt="腌茄子" width="300" height="160" loading="lazy" decoding="async"></div>
+          <div class="recipe-card-body">
+            <span class="recipe-card-tag">小菜</span>
+            <h3 class="recipe-card-title">爽脆不软烂的盐腌炒茄子</h3>
+            <p class="recipe-card-desc">盐腌沥干水分后的筋道口感。</p>
+            <div class="recipe-card-footer">查看详情 →</div>
+          </div>
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <!-- 7. AD AREA 1 -->
+  <div class="ad-container-slot">
+    <div class="ad-box-wrapper">
+      <span class="ad-label">Sponsored Advertisement</span>
+      <div style="font-size: 0.82rem; color: #8E8E8E;">Google AdSense 响应式广告位</div>
+    </div>
+  </div>
+
+  <!-- 8. GLOBAL LANGUAGE STRIP -->
+  <div class="global-lang-bar">
+    <div class="global-lang-title">
+      <span>🌐</span> GLOBAL LANGUAGE EDITIONS
+    </div>
+    <ul class="global-lang-list">
+      <li><a href="../index.html">KR 한국어</a></li>
+      <li><a href="../en/index.html">EN English</a></li>
+      <li><a href="index.html" class="active">ZH 中文</a></li>
+      <li><a href="../ja/index.html">JA 日本語</a></li>
+      <li><a href="../fr/index.html">FR Français</a></li>
+      <li><a href="../de/index.html">DE Deutsch</a></li>
+      <li><a href="../pt/index.html">PT Português</a></li>
+    </ul>
+  </div>
+
+  <!-- 9. FOOTER -->
   <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h3>
+          <span class="brand-seal-svg" style="width:22px; height:22px; vertical-align:middle; margin-right:4px; display:inline-flex;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 11c0 4.418 3.582 8 8 8s8-3.582 8-8H4z" fill="currentColor" fill-opacity="0.2"/>
+              <path d="M4 11h16" />
+              <path d="M19 4L7 10" />
+            </svg>
+          </span>
+          午后厨房
+        </h3>
+        <p>NAVER官方认证美食创作者，为您呈现纯正的韩国家常菜、紫菜包饭、便当餐盒与食材巧用技巧。</p>
+      </div>
+      <div class="footer-nav">
+        <h4>分类导航</h4>
+        <ul>
+          <li><a href="#cat-kimbap">紫菜包饭</a></li>
+          <li><a href="#cat-lunchbox">便当餐盒</a></li>
+          <li><a href="#cat-costco">Costco食材</a></li>
+          <li><a href="#cat-homecook">家常菜谱</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav">
+        <h4>网站政策</h4>
+        <ul>
+          <li><a href="../about.html">关于我们 (About)</a></li>
+          <li><a href="../privacy-policy.html">隐私政策 (Privacy)</a></li>
+          <li><a href="../terms.html">服务条款 (Terms)</a></li>
+          <li><a href="../contact.html">联系我们 (Contact)</a></li>
+        </ul>
+      </div>
+    </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 K-Food Insight. All rights reserved. 真实摄影与独创食谱保护。</p>
+      <p>&copy; 2026 午后厨房 (Afternoon Kitchen). All rights reserved. 真实摄影与独创食谱保护。</p>
     </div>
   </footer>
+
   <script src="../js/main.js"></script>
 </body>
 </html>
